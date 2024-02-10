@@ -1,0 +1,115 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background: #ebebeb;    
+}
+
+/*Header*/
+nav{
+    box-shadow: 0 1px 10px rgba(54, 54, 54, 0.18);
+    -webkit-box-shadow: 0 1px 10px rgba(54, 54, 54, 0.18);
+    background: #fff;
+    display: flex;
+    justify-content: center;
+}
+nav .menu{
+    display: flex;
+    justify-content: flex-end;
+}
+nav .navbar-nav,
+nav .navbar-nav ul,
+nav .navbar-nav ul .row{
+    width: 100%;
+}
+nav ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+nav ul div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li{
+    list-style: none;
+    display: flex;
+}
+nav ul li.centro{
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+nav ul li.centro h4{
+    color: rgba(0,0,0,.7);
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+nav ul li.centro h5{
+    color: rgba(0,0,0,.7);
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 20px;
+}
+nav ul li a:hover{
+    color: rgba(0, 0, 0, .8);
+}
+nav ul div img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    object-fit: cover;
+    position: absolute;
+}
+
+/*Inicio*/
+.inicio{
+    background: #fff url(imagenes/bg-textura.png);
+    background-attachment:fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.inicio .col{
+    display: flex;
+    justify-content: center;
+}
+.inicio .presentacion{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.inicio h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+}
+.inicio h1{
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.inicio button{
+    background:#252525;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
