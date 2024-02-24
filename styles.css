@@ -274,4 +274,10 @@ nav ul div img{
     .skills .habilidades .contenedor .barra{
         width: 100%;
     }
+    .informacion li{
+        list-style: circle;
+    }
+    .inicio{
+        height: 90vh;
+    }
 }
