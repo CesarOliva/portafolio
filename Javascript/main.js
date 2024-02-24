@@ -1,9 +1,16 @@
 $(document).ready(function(){
 
     var height = window.innerHeight;
+    var width = window.innerWidth;
+    console.log(width)
 
     var menu = document.getElementById("nav-menu");
-    menu.setAttribute("data-offset-top", (height*.8));
+    
+    if(width>=768){
+        menu.setAttribute("data-offset-top", (height*.8));
+    }else{
+        menu.setAttribute("data-offset-top", (0));
+    }
 
     var tamañoMenu = menu.clientHeight;
 
@@ -25,7 +32,7 @@ $(document).ready(function(){
     $("#btn-sobre-mi").on('click', function(e){
         e.preventDefault();
         $('html, body').animate({
-            scrollTop: sobreMi - tamañoMenu
+            scrollTop: sobreMi - tamañoMenu -30
         }, 0);
     });
 

@@ -37,11 +37,11 @@
                         <div class="row">
                             <div class="col-12 col-md-5">
                                 <li><a id="btn-inicio" href="#">Inicio</a></li>
-                                <li><a id="btn-sobre-mi" href="#">Sobre mi</a></li>
+                                <li><a id="btn-sobre-mi" href="#">Sobre mí</a></li>
                                 <li><a id="btn-habilidades" href="#">Habilidades</a></li>
                             </div>
                             <div class="col-12 col-md-2">
-                                <img src="imagenes/perfil.jpg" alt="Imagen Perfil" class="brand-img">
+                                <img src="imagenes/perfil.jpg" alt="Imagen Perfil" class="brand-img d-none d-md-block">
                                 <li class="brand-txt centro">
                                     <h4>César Oliva</h4>
                                     <h5>Desarrollador Web</h5>
@@ -62,33 +62,35 @@
     <section class="informacion">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6 sobre-mi">
-                    <div class="descripcion">
-                        <h2>Sobre mi</h2>
-                        <p>Mi nombre es César Oliva, estudiante, practicante y emprendedor</p>
+                <div class="col col-12 col-md-6">
+                    <div class="sobre-mi">
+                        <h2>Sobre mí</h2>
+                        <p>Mi nombre es César Oliva. Soy estudiante, practicante, emprendedor y apasionado.</p>
+                        <img src="imagenes/perfil.jpg" alt="Imagen mía">
                     </div>
-                    <div class="logros">
+                </div>
+                <div class="col col-12 col-md-6 izquierda">
+                    <div class="estudios">
+                        <h2>Estudios y reconocimientos</h2>
+                        <ul>
+                            <li>Multiples cursos en programación</li>
+                            <li>Multiples diplomados del sector informatico</li>
+                            <li>Participación destacada en curso de Desarrollo web</li>
+                            <li>Ganador de un concurso de programación(40 participantes)</li>
+                            <li>Estudiante de Ingeniería en Sistemas</li>
+                        </ul>
+                    </div>
+                    <div class="experiencia">
                         <h2>Experiencia</h2>
-                        <p>Multiples cursos en programación</p>
-                        <p>Multiples diplomados del sector informatico</p>
-                        <p>Participación destacada en curso de Desarrollo web</p>
-                        <p>Ganador del curso de programación impartido por Accenture</p>
+                        <ul>
+                            <li>Más de 20 paginas hechas</li>
+                            <li>Activo desde Diciembre 2019</li>
+                            <li>Más de 200 horas de estudio</li>
+                            <li>7 meses de practicante en una empresa</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 datos">
-                    <div>
-                        <p>X paginas hechas</p>
-                    </div>
-                    <div>
-                        <p>+X Horas trabajadas</p>
-                    </div>
-                    <div>
-                        <p>Activo desde</p>
-                    </div>
-                    <div>
-                        <p>X horas aprendiendo</p>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </section>
@@ -96,78 +98,120 @@
     <section class="skills">
         <div class="container">
             <div class="row">
-                <div class="col habilidades">
-                    <h2>Habilidades</h2>
-                    <div class="lenguajes">
+                <h2>Habilidades</h2>
+                <div class="habilidades row">
+                    <div class="col-12 col-md-4 lenguajes">
                         <h3>Lenguajes de Programación</h3>
-                        <ul>
-                            <li>HTML</li>
-                            <div class="progress">
-                                <div class="progress-bar w-100" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Experto</div>
+                        <div class="contenedor">
+                            <div class="tecnologia">
+                                <p>HTML</p>
                             </div>
-                            <li>CSS</li>
-                            <div class="progress">
-                                <div class="progress-bar w-75" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Avanzado</div>
+                            <div class="barra">
+                                <div class="progreso experto">Experto</div>
                             </div>
-                            <li>JavaScript</li>
-                            <div class="progress">
-                                <div class="progress-bar w-75" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Avanzado</div>
+                        </div>
+                        <div class="contenedor">
+                            <div class="tecnologia">
+                                <p>CSS</p>
                             </div>
-                            <li>Python</li>
-                            <div class="progress">
-                                <div class="progress-bar w-50" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Intermedio</div>
+                            <div class="barra">
+                                <div class="progreso avanzado">Avanzado</div>
                             </div>
-                            <li>Java</li>
-                            <div class="progress">
-                                <div class="progress-bar w-25" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Basico</div>
+                        </div>
+                        <div class="contenedor">
+                            <div class="tecnologia">
+                                <p>JavaScript</p>
                             </div>
-                        </ul>
+                            <div class="barra">
+                                <div class="progreso avanzado">Avanzado</div>
+                            </div>
+                        </div>
+                        <div class="contenedor">
+                            <div class="tecnologia">
+                                <p>Python</p>
+                            </div>
+                            <div class="barra">
+                                <div class="progreso intermedio">Intermedio</div>
+                            </div>
+                        </div>
+                        <div class="contenedor">
+                            <div class="tecnologia">
+                                <p>Java</p>
+                            </div>
+                            <div class="barra">
+                                <div class="progreso intermedio">Intermedio</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="herramientas">
+                    <div class="col-12 col-md-4 herramientas">
                         <h3>Herramientas</h3>
-                        <ul>
-                            <li>Git</li>
-                            <div class="progress">
-                                <div class="progress-bar w-75" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Avanzado</div>
+                        <div class="contenedor">
+                            <div class="tecnologia">
+                                <p>Git</p>
                             </div>
-                            <li>Github</li>
-                            <div class="progress">
-                                <div class="progress-bar w-75" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Avanzado</div>
+                            <div class="barra">
+                                <div class="progreso avanzado">Avanzado</div>
                             </div>
-                            <li>MongoDB</li>
-                            <div class="progress">
-                                <div class="progress-bar w-100" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Experto</div>
+                        </div>
+                        <div class="contenedor">
+                            <div class="tecnologia">
+                                <p>Github</p>
                             </div>
-                            <li>Wordpress</li>
-                            <div class="progress">
-                                <div class="progress-bar w-75" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Avanzado</div>
+                            <div class="barra">
+                                <div class="progreso avanzado">Avanzado</div>
                             </div>
-                            <li>Elementor</li>
-                            <div class="progress">
-                                <div class="progress-bar w-100" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Experto</div>
+                        </div>
+                        <div class="contenedor">
+                            <div class="tecnologia">
+                                <p>MongoDB</p>
                             </div>
-                        </ul>
+                            <div class="barra">
+                                <div class="progreso avanzado">Avanzado</div>
+                            </div>
+                        </div>
+                        <div class="contenedor">
+                            <div class="tecnologia">
+                                <p>Wordpress</p>
+                            </div>
+                            <div class="barra">
+                                <div class="progreso avanzado">Avanzado</div>
+                            </div>
+                        </div>
+                        <div class="contenedor">
+                            <div class="tecnologia">
+                                <p>Elementor</p>
+                            </div>
+                            <div class="barra">
+                                <div class="progreso experto">Experto</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="otros">
+                    <div class="col-12 col-md-4 otros">
                         <h3>Otros</h3>
-                        <ul>
-                            <li>Idioma ingles</li>
-                            <div class="progress">
-                                <div class="progress-bar w-75" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Avanzado</div>
+                        <div class="contenedor">
+                            <div class="tecnologia">
+                                <p>Idioma Ingles</p>
                             </div>
-                            <li>Idioma Portugués</li>
-                            <div class="progress">
-                                <div class="progress-bar w-50" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Intermedio</div>
+                            <div class="barra">
+                                <div class="progreso avanzado">Avanzado</div>
                             </div>
-                            <li>Diseño de paginas Responsivo</li>
-                            <div class="progress">
-                                <div class="progress-bar w-100" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Experto</div>
+                        </div>
+                        <div class="contenedor">
+                            <div class="tecnologia">
+                                <p>Idioma Portugués</p>
                             </div>
-                            <li>Facilidad de palabra</li>
-                            <div class="progress">
-                                <div class="progress-bar w-50" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Intermedio</div>
+                            <div class="barra">
+                                <div class="progreso intermedio">Intermedio</div>
                             </div>
-                        </ul>
+                        </div>
+                        <div class="contenedor">
+                            <div class="tecnologia">
+                                <p>Diseño de páginas responsivas</p>
+                            </div>
+                            <div class="barra">
+                                <div class="progreso experto">Experto</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
