@@ -32,14 +32,12 @@ nav{
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
-    border: 10px solid white;
     -webkit-transition: .5s !important;
     transition: .5s !important;
     -webkit-transition: .5s !important;
     z-index: 2;
     box-shadow: 0 5px 1px rgba(128, 128, 128, 0.13);
     width: 170px;
-    border-radius: 50%;
 }
 .navbar.affix .brand-txt {
     bottom: 0;
@@ -198,6 +196,9 @@ nav ul div img{
     font-size: 30px;
     margin-bottom: 20px;
 }
+.skills h3{
+    margin-top: 10px;
+}
 .skills .habilidades .col-12{
     border-right: 1px solid #ebebeb;
 }
@@ -253,13 +254,24 @@ nav ul div img{
     font-size: 24px;
     text-align: center;
 }
-
-@media screen and (max-width:768px){
-    .informacion .sobre-mi img{
-        margin-bottom: 30px;
-    }   
-}
-@media screen and (max-width:460px){
+@media screen and (max-width:992px){
+    .navbar .brand .brand-img {
+        width: 140px;
+    }
+    nav ul div img{
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        border: 6px solid #fff;
+        object-fit: cover;
+        position: absolute;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+    nav ul li a#btn-portafolio{
+        padding-left: 45px;
+    }
     .skills .habilidades .contenedor{
         display: block;
         margin:0;
@@ -267,6 +279,7 @@ nav ul div img{
     .skills .habilidades .col-12{
         margin-bottom: 20px;
         border: 1px solid #ebebeb;
+        border-radius: 10px;
     }
     .skills .habilidades .contenedor .tecnologia{
         width: 100%;
@@ -274,10 +287,44 @@ nav ul div img{
     .skills .habilidades .contenedor .barra{
         width: 100%;
     }
+}
+@media screen and (max-width:768px){
+    .informacion .sobre-mi img{
+        margin-bottom: 30px;
+    }   
+    .estudios ul{
+        margin-bottom: 20px;
+    }
+    nav ul li a#btn-portafolio{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:576px){
+    .navbar .navbar-nav .col-12.col-md-5{
+        display: flex;
+        justify-content: space-around;
+    }
+    .navbar .navbar-nav .col-12.col-md-5 li{
+        width: 30%;
+        display: flex;
+        justify-content: center;
+    }
+    .navbar .navbar-nav .col-12.col-md-5 li a{
+        text-align: center;
+    }
+}
+@media screen and (max-width:460px){
     .informacion li{
         list-style: circle;
     }
     .inicio{
         height: 90vh;
     }
+    nav .menu{
+        padding: 10px 12px;
+    }
+
 }
