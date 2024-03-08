@@ -1,3 +1,7 @@
+/*NOTAS: PROBAR HABILIDADES CUANDO SE PUEDA VER COMPLETO EN COMPUTADORA
+    INVESTIGAR CERRAR EL MENÚ EN MOVIL
+*/
+
 $(document).ready(function(){
 
     var height = window.innerHeight;
@@ -39,7 +43,7 @@ $(document).ready(function(){
     $("#btn-habilidades").on('click', function(e){
         e.preventDefault();
         $('html, body').animate({
-            scrollTop: habilidades - tamañoMenu
+            scrollTop: habilidades - tamañoMenu -50
         }, 0);
     });
 
