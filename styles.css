@@ -254,6 +254,37 @@ nav ul div img{
     font-size: 24px;
     text-align: center;
 }
+
+.portafolio h2{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.portafolio h5{
+    text-align: center;
+}
+
+.portafolio .boton{
+    display: flex;
+    justify-content: center;
+}
+
+.portafolio .boton button{
+    background: #ebebeb;
+    border: 0;
+}
+.portafolio button a{
+    color: #000;
+    text-decoration: none;
+}
+
+.portafolio .card{
+    margin-bottom: 15px;
+}
+
 @media screen and (max-width:992px){
     .navbar .brand .brand-img {
         width: 140px;

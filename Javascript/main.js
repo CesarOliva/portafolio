@@ -43,7 +43,7 @@ $(document).ready(function(){
     $("#btn-habilidades").on('click', function(e){
         e.preventDefault();
         $('html, body').animate({
-            scrollTop: habilidades - tamañoMenu -50
+            scrollTop: habilidades - tamañoMenu -70
         }, 0);
     });
 
