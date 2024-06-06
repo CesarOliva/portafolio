@@ -247,13 +247,14 @@ nav ul div img{
     border-radius: 8px;
     width: 25%;
 }
-
 .skills .habilidades h3{
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 24px;
     text-align: center;
 }
+
+/*PORTAFOLIO*/
 
 .portafolio h2{
     text-align: center;
@@ -262,16 +263,13 @@ nav ul div img{
     font-size: 30px;
     margin-bottom: 20px;
 }
-
 .portafolio h5{
     text-align: center;
 }
-
 .portafolio .boton{
     display: flex;
     justify-content: center;
 }
-
 .portafolio .boton button{
     background: #ebebeb;
     border: 0;
@@ -280,9 +278,12 @@ nav ul div img{
     color: #000;
     text-decoration: none;
 }
-
 .portafolio .card{
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+}
+.portafolio .row{
+    display: flex;
+    justify-content: space-around;
 }
 
 @media screen and (max-width:992px){
@@ -345,6 +346,9 @@ nav ul div img{
     }
     .navbar .navbar-nav .col-12.col-md-5 li a{
         text-align: center;
+    }
+    .portafolio .col-sm-6{
+        max-width: 80%;
     }
 }
 @media screen and (max-width:460px){

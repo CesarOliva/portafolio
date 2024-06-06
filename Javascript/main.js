@@ -1,7 +1,3 @@
-/*NOTAS: PROBAR HABILIDADES CUANDO SE PUEDA VER COMPLETO EN COMPUTADORA
-    INVESTIGAR CERRAR EL MENÚ EN MOVIL
-*/
-
 $(document).ready(function(){
 
     var height = window.innerHeight;
@@ -50,7 +46,7 @@ $(document).ready(function(){
     $("#btn-portafolio").on('click', function(e){
         e.preventDefault();
         $('html, body').animate({
-            scrollTop: portafolio - tamañoMenu
+            scrollTop: portafolio - tamañoMenu -30
         }, 0);
     });
 
