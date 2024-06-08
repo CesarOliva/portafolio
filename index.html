@@ -87,7 +87,7 @@
                         <ul>
                             <li>Más de 10 paginas hechas</li>
                             <li>Practicante en agencia por 7 meses</li>
-                            <li>Más de 200 horas de estudio</li>
+                            <li>Más de 100 horas de estudio</li>
                             <li>Activo desde Diciembre 2019</li>
                         </ul>
                     </div>
@@ -342,7 +342,7 @@
     <section class="contacto">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-8 col-lg-6">
                     <form>
                         <h2>Contacto</h2>
                         <label for="name">Nombre:</label>
@@ -351,7 +351,16 @@
                         <input type="email" name="email" id="email" placeholder="Correo">
                         <label for="Teléfono">Teléfono:</label>
                         <input type="tel" name="phone" id="phone" placeholder="Teléfono">
-                        <label for="message">Mensaje:</label>
+                        <label>Método de Contacto:</label>
+                        <div class="radio-form">
+                            <input type="radio" name="radio" id="telefono" value="Télefono">
+                            <label for="telefono">Télefono</label>
+                        </div>
+                        <div class="radio-form">
+                            <input type="radio" name="radio" id="correo" value="Correo">
+                            <label for="correo">Correo</label>
+                        </div>
+                        <label for="message" class="mensaje">Mensaje:</label>
                         <textarea name="message" id="message" cols="30" rows="5" placeholder="Mensaje"></textarea>
                         <div class="enviar">
                             <input type="submit" value="Enviar">

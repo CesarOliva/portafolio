@@ -108,6 +108,7 @@ nav ul div img{
 }
 
 /*Inicio*/
+
 .inicio{
     background: #fff url(imagenes/bg-textura.png);
     background-attachment:fixed;
@@ -148,6 +149,7 @@ nav ul div img{
 }
 
 /*Información*/
+
 .informacion{
     padding: 40px 30px 30px 30px;
     background: #fff;
@@ -186,8 +188,13 @@ nav ul div img{
 }
 
 /*Habilidades*/
+
 .skills{
     padding: 30px;
+}
+.skills .row{
+    display: flex;
+    justify-content: center;
 }
 .skills h2{
     text-align: center;
@@ -276,6 +283,7 @@ nav ul div img{
 }
 .portafolio button a{
     color: #000;
+    
     text-decoration: none;
 }
 .portafolio .card{
@@ -288,6 +296,9 @@ nav ul div img{
 
 /*CONTACTO*/
 
+.contacto{
+    margin: 30px 0;
+}
 .contacto .row{
     display: flex;
     justify-content: center;
@@ -320,9 +331,13 @@ nav ul div img{
     border-radius: 10px;
     margin-bottom: 10px;
     padding: 5px 10px;
+    outline: none;
 }
-.contacto form input:target{
-    border: 1px solid #25252509;
+.contacto form label.mensaje{
+    margin-top: 10px;
+}
+.contacto form textarea{
+    max-height: 250px;
 }
 .contacto form .enviar{
     margin-top: 15px;
@@ -331,6 +346,10 @@ nav ul div img{
 }
 .contacto form .enviar input{
     width: 150px;
+}
+.contacto form .enviar input:hover{
+    background: #252525;
+    color: #fff;
 }
 
 @media screen and (max-width:992px){

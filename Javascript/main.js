@@ -60,7 +60,7 @@ $(document).ready(function(){
     $("#btn-contacto").on('click', function(e){
         e.preventDefault();
         $('html, body').animate({
-            scrollTop: contacto - tamañoMenu
+            scrollTop: contacto - tamañoMenu -30
         }, 0);
     });
 });
