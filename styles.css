@@ -268,7 +268,7 @@ nav ul div img{
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 .portafolio h5{
     text-align: center;
@@ -279,7 +279,11 @@ nav ul div img{
 }
 .portafolio .boton button{
     background: #ebebeb;
-    border: 0;
+    border: 2px solid #ebebeb;
+}
+.portafolio .boton button:focus{
+    border: 2px solid #252525;
+    box-shadow: 0 0;
 }
 .portafolio button a{
     color: #000;
@@ -292,6 +296,99 @@ nav ul div img{
 .portafolio .row{
     display: flex;
     justify-content: space-around;
+}
+
+/*PAQUETES*/
+
+.paquetes .estaticas{
+    background-color: #717171;
+    background: url(imagenes/precios-bg.jpg);
+}
+.paquetes h3{
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+    font-weight: 300;
+    font-size: 30px;
+    text-align: center;
+    margin: 20px 0;
+}
+.paquetes .estaticas h3{
+    color: #fff;
+}
+.paquetes .paq{
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 30px 50px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.paquetes .autoadministrables .paq{
+    border: 1px solid #252525;
+}
+.paquetes .paq.centro{
+    background: #4C8DCE;
+    border: 1px solid #4C8DCE;
+}
+.paquetes .paq.centro{
+    color: #fff;
+}
+.paquetes .paq .plan{
+    margin-bottom: 20px;
+}
+.paquetes .paq .plan h5{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 26px;
+    text-align: center;
+}
+.paquetes .paq .plan p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    text-align: center;
+}
+.paquetes .paq .contenido ul{
+    padding: 0;
+}
+.paquetes .paq .contenido ul li{
+    list-style: none;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #252525;
+}
+.paquetes .paq.centro ul li{
+    border-bottom: 1px solid #fff;
+}
+.paquetes .contratar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+    width: 150px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #4C8DCE;
+}
+.paquetes .contratar a{
+    color: #252525;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: 17px;
+    text-decoration: none;
+}
+.paquetes .centro .contratar{
+    background: #4C8DCE;
+    border: 1px solid #fff;
+}
+.paquetes .centro a{
+    color: #fff;
 }
 
 /*CONTACTO*/
@@ -375,7 +472,7 @@ nav ul div img{
         margin:0;
     }
     .skills .habilidades .col-12{
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         border: 1px solid #ebebeb;
         border-radius: 10px;
     }
