@@ -303,6 +303,8 @@ nav ul div img{
 .paquetes .estaticas{
     background-color: #717171;
     background: url(imagenes/precios-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .paquetes h3{
     font-family: 'Open Sans', sans-serif;
