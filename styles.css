@@ -551,14 +551,6 @@ nav ul div img{
     .contacto h2{
         font-size: 26px;
     }
-    .whatsapp{
-        height: 60px;
-        width: 60px;
-    }
-    .whatsapp img{
-        width: 60px;
-        height: 60px;
-    }
 }
 @media screen and (max-width:460px){
     .informacion li{
@@ -570,5 +562,4 @@ nav ul div img{
     nav .menu{
         padding: 10px 12px;
     }
-
 }
