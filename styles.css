@@ -147,6 +147,10 @@ nav ul div img{
     font-weight: 400;
     font-size: 16px;
 }
+.inicio button a{
+    color: #fff;
+    text-decoration: none;
+}
 
 /*Información*/
 
@@ -323,6 +327,7 @@ nav ul div img{
     border-radius: 10px;
     padding: 30px 50px;
     margin: 20px;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -450,6 +455,20 @@ nav ul div img{
     background: #252525;
     color: #fff;
 }
+.whatsapp{
+    width: 80px;
+    height: 80px;
+    float: right;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+.whatsapp img{
+    width: 80px;
+    height: 80px;
+    opacity: .7;
+}
 
 @media screen and (max-width:992px){
     .navbar .brand .brand-img {
@@ -498,6 +517,14 @@ nav ul div img{
     nav ul li a{
         font-size: 18px;
     }
+    .whatsapp{
+        width: 70px;
+        height: 70px;
+    }
+    .whatsapp img{
+        width: 70px;
+        height: 70px;
+    }
 }
 @media screen and (max-width:576px){
     .navbar .navbar-nav .col-12.col-md-5{
@@ -523,6 +550,14 @@ nav ul div img{
     }
     .contacto h2{
         font-size: 26px;
+    }
+    .whatsapp{
+        height: 60px;
+        width: 60px;
+    }
+    .whatsapp img{
+        width: 60px;
+        height: 60px;
     }
 }
 @media screen and (max-width:460px){

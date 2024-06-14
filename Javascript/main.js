@@ -1,18 +1,14 @@
 $(document).ready(function(){
-
     var height = window.innerHeight;
     var width = window.innerWidth;
-    console.log(width)
-
     var menu = document.getElementById("nav-menu");
+    var tamañoMenu = menu.clientHeight;
     
     if(width>=768){
         menu.setAttribute("data-offset-top", (height*.8));
     }else{
         menu.setAttribute("data-offset-top", (0));
     }
-
-    var tamañoMenu = menu.clientHeight;
 
     var inicio = $(".inicio").offset().top;
         sobreMi = $(".sobre-mi").offset().top;
