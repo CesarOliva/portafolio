@@ -304,6 +304,10 @@ nav ul div img{
 
 /*PAQUETES*/
 
+.paquetes .row{
+    display: flex;
+    justify-content: center;
+}
 .paquetes .estaticas{
     background-color: #717171;
     background: url(imagenes/precios-bg.jpg);
