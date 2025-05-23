@@ -1,9 +1,9 @@
-#PORTAFOLIO WEB - CÉSAR OLIVA
+# PORTAFOLIO WEB - CÉSAR OLIVA
 
 ¡Hola! Soy César Oliva, estudiante de Ingeniería en Sistemas del Instituto Tecnológico de Nuevo Leon.
 Mi meta es convertirme en Desarrolador Front-End, por lo que mis proyetos están mas que nada enfocados a la web.
 
-##Proyectos
+## Proyectos
 
 La mayoria de mis proyectos son paginas web hechas con HTML, CSS y Javascript. Otros muchos son paginas hechas con Wordpres utilizando el PlugIn de Elementor.
 Ultimamente estoy entrando mas al frontEnd aprendiendo y practicando REACT
@@ -16,6 +16,6 @@ Java es un lenguaje que he utilizado mucho para los proyectos, proyectos que sub
 
 Ah, tengo una versión web del juego BuckShot Roulette que deberían probar si están en computadora (Ya que está solo optimizado para computadoras).
 
-##Resumen
+## Resumen
 
 Me considero una persona capaz, inteligente y estudiosa. Estoy hambriento de aprender y ansioso por lo que me depara el futuro.
