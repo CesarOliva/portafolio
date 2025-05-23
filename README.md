@@ -1,6 +1,6 @@
 # PORTAFOLIO WEB - CÉSAR OLIVA
 
-¡Hola! Soy César Oliva, estudiante de Ingeniería en Sistemas del Instituto Tecnológico de Nuevo Leon.
+¡Hola! Soy César Oliva, estudiante de Ingeniería en Sistemas del Instituto Tecnológico de Nuevo Leon y este es mi portafolio web (02/2024).
 Mi meta es convertirme en Desarrolador Front-End, por lo que mis proyetos están mas que nada enfocados a la web.
 
 ## Proyectos
