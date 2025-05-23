@@ -1,6 +1,6 @@
 # PORTAFOLIO WEB - CÉSAR OLIVA
 
-¡Hola! Soy César Oliva, estudiante de Ingeniería en Sistemas del Instituto Tecnológico de Nuevo Leon y este es mi portafolio web (02/2024).
+¡Hola! Soy <a href="https://cesaroliva.github.io/portafolio/">César Oliva</a>, estudiante de Ingeniería en Sistemas del Instituto Tecnológico de Nuevo Leon y este es mi portafolio web (02/2024).
 Mi meta es convertirme en Desarrolador Front-End, por lo que mis proyetos están mas que nada enfocados a la web.
 
 ## Proyectos
@@ -19,3 +19,7 @@ Ah, tengo una versión web del juego BuckShot Roulette que deberían probar si e
 ## Resumen
 
 Me considero una persona capaz, inteligente y estudiosa. Estoy hambriento de aprender y ansioso por lo que me depara el futuro.
+
+## Ver en
+
+<a href="https://cesaroliva.github.io/portafolio/">https://cesaroliva.github.io/portafolio/</a>
