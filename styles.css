@@ -291,11 +291,13 @@ nav ul div img{
 }
 .portafolio button a{
     color: #000;
-    
     text-decoration: none;
 }
 .portafolio .card{
     margin-bottom: 20px;
+}
+.portafolio .card-img-top{
+    height: 150px;
 }
 .portafolio .row{
     display: flex;
@@ -474,6 +476,18 @@ nav ul div img{
     opacity: .7;
 }
 
+@media screen and (max-width:1400px){
+    .portafolio .card-img-top{
+        height: 130px;
+    }
+}
+
+@media screen and (max-width:1200px){
+    .portafolio .card-img-top{
+        height: 105px;
+    }
+}
+
 @media screen and (max-width:992px){
     .navbar .brand .brand-img {
         width: 140px;
@@ -529,6 +543,9 @@ nav ul div img{
         width: 70px;
         height: 70px;
     }
+    .portafolio .card-img-top{
+        height: 120px;
+    }
 }
 @media screen and (max-width:576px){
     .navbar .navbar-nav .col-12.col-md-5{
@@ -554,6 +571,9 @@ nav ul div img{
     }
     .contacto h2{
         font-size: 26px;
+    }
+    .portafolio .card-img-top{
+        height: auto;
     }
 }
 @media screen and (max-width:460px){
