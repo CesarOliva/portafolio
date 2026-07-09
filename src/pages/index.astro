@@ -1,17 +1,13 @@
 ---
 
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+	title="Cesar Oliva - Desarrollador Frontend | Portafolio"
+	description="Desarrollador Frontend con más de 4 años de experiencia en sitios web, landing pages, tiendas en línea y soluciones personalizadas. Especializado en React, Next.js y TypeScript. Monterrey, NL."
+>
+	<Hero />
+</BaseLayout>
