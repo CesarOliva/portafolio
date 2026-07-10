@@ -1,13 +1,17 @@
 ---
 
-import BaseLayout from '../layouts/BaseLayout.astro';
+import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Skills from '../components/Skills.astro';
 
 ---
 
-<BaseLayout
+<Layout
 	title="Cesar Oliva - Desarrollador Frontend | Portafolio"
 	description="Desarrollador Frontend con más de 4 años de experiencia en sitios web, landing pages, tiendas en línea y soluciones personalizadas. Especializado en React, Next.js y TypeScript. Monterrey, NL."
 >
 	<Hero />
-</BaseLayout>
+	<About />
+	<Skills />
+</Layout>

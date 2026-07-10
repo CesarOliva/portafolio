@@ -1,0 +1,98 @@
+---
+import { Monitor, Database, Server, Wrench } from '@lucide/astro';
+---
+<section id="stack" class="py-24 px-6 bg-neutral-900">
+    <div class="max-w-300 mx-auto px-8 md:px-12">
+        <div class="flex items-center gap-4 mb-16">
+            <h2 class="text-3xl font-bold font-mono">Stack Tecnológico</h2>
+            <div class="h-[1px] grow bg-neutral-800"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Frontend -->
+            <div class="p-8 rounded-2xl border border-gray-800/50 hover:border-gray-700 transition-colors">
+                <div class="w-12 h-12 rounded-xl bg-neutral-800 flex items-center justify-center mb-6 border border-gray-800">
+                    <Monitor class="size-6 text-blue-300"/>
+                </div>
+                <h3 class="text-xl font-semibold mb-6 text-white">Frontend</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
+                        <i class="fa-brands fa-html5 text-orange-500"></i>HTML/CSS
+                    </span>
+                    <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
+                        <i class="fa-brands fa-square-js text-yellow-400"></i>JavaScript
+                    </span>
+                    <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
+                        <i class="fa-brands fa-square-js text-blue-400"></i>TypeScript
+                    </span>
+                    <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
+                        <i class="fa-brands fa-react text-cyan-400"></i>React
+                    </span>
+                    <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
+                        <i class="fa-brands fa-react text-white"></i>Next.js
+                    </span>
+                </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="p-8 rounded-2xl border border-gray-800/50 hover:border-gray-700 transition-colors">
+                <div class="w-12 h-12 rounded-xl bg-neutral-800 flex items-center justify-center mb-6 border border-gray-800">
+                    <Server class="size-6 text-blue-300"/>
+                </div>
+                <h3 class="text-xl font-semibold mb-6 text-white">Backend</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
+                        <i class="fa-brands fa-node-js text-green-500"></i>Node.js
+                    </span>
+                    <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
+                        <i class="fa-brands fa-square-js text-yellow-400"></i>Express.js
+                    </span>
+                    <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
+                        <i class="fa-brands fa-python text-[#009688]"></i>FastAPI
+                    </span>
+                </div>
+            </div>
+
+            <!-- Database -->
+            <div class="p-8 rounded-2xl border border-gray-800/50 hover:border-gray-700 transition-colors">
+                <div class="w-12 h-12 rounded-xl bg-neutral-800 flex items-center justify-center mb-6 border border-gray-800">
+                    <Database class="size-6 text-blue-300"/>
+                </div>
+                <h3 class="text-xl font-semibold mb-6 text-white">Bases de datos</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
+                        <i class="fa-solid fa-database text-[#00628c]"></i>MySQL
+                    </span>
+                    <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
+                        <i class="fa-solid fa-database text-[#31648c]"></i>PostgreSQL
+                    </span>
+                    <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
+                        <i class="fa-solid fa-leaf text-green-700"></i>MongoDB
+                    </span>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="p-8 rounded-2xl border border-gray-800/50 hover:border-gray-700 transition-colors">
+                <div class="w-12 h-12 rounded-xl bg-neutral-800 flex items-center justify-center mb-6 border border-gray-800">
+                    <Wrench class="size-6 text-blue-300"/>
+                </div>
+                <h3 class="text-xl font-semibold mb-6 text-white">Herramientas</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
+                        <i class="fa-brands fa-git-alt text-orange-600"></i>Git
+                    </span>
+                    <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
+                        <i class="fa-brands fa-linux text-white"></i>Linux
+                    </span>
+                    <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
+                        <i class="fa-brands fa-figma text-white"></i>Figma
+                    </span>
+                    <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
+                        <i class="fa-brands fa-wordpress text-white"></i>WordPress
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
