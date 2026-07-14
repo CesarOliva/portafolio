@@ -1,3 +1,63 @@
+---
+
+const icons = {
+    "Next.js": "fa-brands fa-react text-white",
+    "React": "fa-brands fa-react text-cyan-400",
+    "Typescript": "fa-brands fa-square-js text-blue-400",
+    "Convex": "fa-solid fa-database text-[#f3b01c]",
+    "Mercado Pago": "fa-solid fa-credit-card text-[#00b5f6]",
+    "Leaflet": "fa-solid fa-leaf text-green-500",
+    "Java": "fa-brands fa-java text-white",
+    "MySQL": "fa-solid fa-database text-[#00628c]",
+    "Clerk": "fa-solid fa-user-lock text-[#7e7abd]"
+};
+
+type Technology = keyof typeof icons;
+
+const projects: {
+    title: string;
+    slug: string;
+    description: string;
+    technologies: Technology[];
+    link: string;
+    span: string;
+}[] = [
+    {
+        title: "Dominoes",
+        slug: "Ecommerce",
+        description: "Ecommerce moderno con autenticacion, checkout, pasarela de pagos, panel de administracion y actualizaciones en tiempo real.",
+        technologies: ["Next.js", "Typescript", "Convex", "Mercado Pago"],
+        link: "https://github.com/CesarOliva/Dominoes",
+        span: "md:col-span-5"
+    },
+    {
+        title: "Regionerate",
+        slug: "Mapa interactivo",
+        description: "Plataforma con mapa interactivo para explorar especies nativas de Nuevo Leon y apoyar decisiones de reforestacion con datos.",
+        technologies: ["React", "Typescript", "Convex", "Leaflet"],
+        link: "https://github.com/deltahbc2/regionerate",
+        span: "md:col-span-3"
+    },
+    {
+        title: "Gestor Biblioteca",
+        slug: "App de escritorio",
+        description: "Aplicación de escritorio para gestionar una biblioteca, permitiendo el registro de libros, usuarios y préstamos.",
+        technologies: ["Java", "MySQL"],
+        link: "https://github.com/CesarOliva/GestorBiblioteca",
+        span: "md:col-span-3"
+    },
+    {
+        title: "Skillpath",
+        slug: "AI + onboarding",
+        description: "Plataforma de aprendizaje y onboarding con landing publica, panel admin, roadmaps generados con IA, manejo de habilidades, quizzes y carga de PDFs.",
+        technologies: ["Next.js", "Typescript", "Convex", "Clerk"],
+        link: "https://github.com/deltahbc2/Skillpath",
+        span: "md:col-span-5"
+    }
+]
+
+---
+
 <section id="projects" class="py-24 px-6">
     <div class="max-w-300 mx-auto px-2 md:px-12">
         <div class="flex items-center gap-4 mb-16">
@@ -6,159 +66,39 @@
         </div>
 
         <div class="grid md:grid-cols-8 gap-6">
-            <!-- Dominoes -->
-            <a
-                href="https://github.com/CesarOliva/Dominoes"
-                target="_blank"
-                rel="noreferrer"
-                class="rounded-2xl border border-[#cfb095]/10 hover:border-[#ab805a]/50 transition-colors overflow-hidden group md:col-span-5"
-            >
-                <div class="h-64 bg-linear-to-br from-amber-500/25 via-slate-900 to-slate-950 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.15),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.08),transparent_30%)]"></div>
-                        
-                    <div class="absolute inset-0 flex items-end justify-between p-6">
-                        <div>
-                            <div class="mt-4 text-2xl font-black tracking-tight text-white/90">
-                                Ecommerce
+            {projects.map((project) => (
+                <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    class={`rounded-2xl border border-[#cfb095]/10 hover:border-[#ab805a]/50 transition-colors overflow-hidden group ${project.span}`}
+                >
+                    <div class="h-64 bg-linear-to-br from-amber-500/25 via-slate-900 to-slate-950 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.15),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.08),transparent_30%)]"></div>
+                            
+                        <div class="absolute inset-0 flex items-end justify-between p-6">
+                            <div>
+                                <div class="mt-4 text-2xl font-black tracking-tight text-white/90">
+                                    {project.slug}
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="p-8">
-                    <h3 class="font-semibold text-2xl mb-2 group-hover:text-[#ab805a]">Dominoes</h3>
-                    <p class="text-md text-gray-400">Ecommerce moderno con autenticacion, checkout, pasarela de pagos, panel de administracion y actualizaciones en tiempo real.</p>
+                    <div class="p-8">
+                        <h3 class="font-semibold text-2xl mb-2 group-hover:text-[#ab805a]">{project.title}</h3>
+                        <p class="text-md text-gray-400">{project.description}</p>
 
-                    <div class="flex flex-wrap gap-2 mt-4">
-                        <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
-                            <i class="fa-brands fa-react text-white"></i>Next.js
-                        </span>
-                        <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
-                            <i class="fa-brands fa-square-js text-blue-400"></i>Typescript
-                        </span>
-                        <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
-                            <i class="fa-solid fa-database text-[#f3b01c]"></i>Convex
-                        </span>
-                        <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
-                            <i class="fa-solid fa-credit-card text-[#00b5f6]"></i>Mercado Pago
-                        </span>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Regionerate -->
-            <a
-                href="https://github.com/deltahbc2/regionerate"
-                target="_blank"
-                rel="noreferrer"
-                class="rounded-2xl border border-[#cfb095]/10 hover:border-[#ab805a]/50 transition-colors overflow-hidden group md:col-span-3"
-            >
-                <div class="h-64 bg-linear-to-br from-emerald-500/25 via-slate-900 to-slate-950 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.15),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.08),transparent_30%)]"></div>
-                        
-                    <div class="absolute inset-0 flex items-end justify-between p-6">
-                        <div>
-                            <div class="mt-4 text-2xl font-black tracking-tight text-white/90">
-                                Mapa interactivo 
-                            </div>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            {project.technologies.map((tech: Technology) => (
+                                <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
+                                    <i class={icons[tech]}></i>{tech}
+                                </span>
+                            ))}
                         </div>
                     </div>
-                </div>
-
-                <div class="p-8">
-                    <h3 class="font-semibold text-2xl mb-2 group-hover:text-[#ab805a]">Regionerate</h3>
-                    <p class="text-md text-gray-400">Plataforma con mapa interactivo para explorar especies nativas de Nuevo Leon y apoyar decisiones de reforestacion con datos.</p>
-
-                    <div class="flex flex-wrap gap-2 mt-4">
-                        <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
-                            <i class="fa-brands fa-react text-cyan-400"></i>React
-                        </span>
-                        <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
-                            <i class="fa-brands fa-square-js text-blue-400"></i>Typescript
-                        </span>
-                        <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
-                            <i class="fa-solid fa-database text-[#f3b01c]"></i>Convex
-                        </span>
-                        <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
-                            <i class="fa-solid fa-leaf text-[#b5e161]"></i>Leaflet
-                        </span>
-                    </div>
-                </div>
-            </a>
-            
-            <!-- Gestor Biblioteca -->
-            <a
-                href="https://github.com/CesarOliva/GestorBiblioteca"
-                target="_blank"
-                rel="noreferrer"
-                class="rounded-2xl border border-[#cfb095]/10 hover:border-[#ab805a]/50 transition-colors overflow-hidden group md:col-span-3"
-            >
-                <div class="h-64 bg-linear-to-br from-violet-500/25 via-slate-900 to-slate-950 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.15),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.08),transparent_30%)]"></div>
-                        
-                    <div class="absolute inset-0 flex items-end justify-between p-6">
-                        <div>
-                            <div class="mt-4 text-2xl font-black tracking-tight text-white/90">
-                                App de escritorio 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-8">
-                    <h3 class="font-semibold text-2xl mb-2 group-hover:text-[#ab805a]">Gestor Biblioteca</h3>
-                    <p class="text-md text-gray-400">Aplicación de escritorio para gestionar una biblioteca, permitiendo el registro de libros, usuarios y préstamos.</p>
-
-                    <div class="flex flex-wrap gap-2 mt-4">
-                        <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
-                            <i class="fa-brands fa-java text-white"></i>Java
-                        </span>
-                        <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
-                            <i class="fa-solid fa-database text-[#00628c]"></i>MySQL
-                        </span>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Skillpath -->
-            <a
-                href="https://github.com/deltahbc2/Skillpath"
-                target="_blank"
-                rel="noreferrer"
-                class="rounded-2xl border border-[#cfb095]/10 hover:border-[#ab805a]/50 transition-colors overflow-hidden group md:col-span-5"
-            >
-                <div class="h-64 bg-linear-to-br from-cyan-500/25 via-slate-900 to-slate-950 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.15),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.08),transparent_30%)]"></div>
-                        
-                    <div class="absolute inset-0 flex items-end justify-between p-6">
-                        <div>
-                            <div class="mt-4 text-2xl font-black tracking-tight text-white/90">
-                                AI + onboarding
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-8">
-                    <h3 class="font-semibold text-2xl mb-2 group-hover:text-[#ab805a]">Skillpath</h3>
-                    <p class="text-md text-gray-400">Plataforma de aprendizaje y onboarding con landing publica, panel admin, roadmaps generados con IA, manejo de habilidades, quizzes y carga de PDFs.</p>
-
-                    <div class="flex flex-wrap gap-2 mt-4">
-                        <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
-                            <i class="fa-brands fa-react text-white"></i>Next.js
-                        </span>
-                        <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
-                            <i class="fa-brands fa-square-js text-blue-400"></i>Typescript
-                        </span>
-                        <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
-                            <i class="fa-solid fa-database text-[#f3b01c]"></i>Convex
-                        </span>
-                        <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
-                            <i class="fa-solid fa-user-lock text-[#7e7abd]"></i>Clerk
-                        </span>
-                    </div>
-                </div>
-            </a>
+                </a>
+            ))}
         </div>
     </div>
 </section>
