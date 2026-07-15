@@ -24,7 +24,7 @@ const experience = [
     },
     {
         title: "WordPress Developer",
-        place: "Primer En Publicidad",
+        place: "Primero En Publicidad",
         date: "Jul 2021 — Sep 2021",
         description: [
             "Desarrollo y personalización de sitios web utilizando WordPress.",
@@ -36,7 +36,7 @@ const experience = [
 
 ---
 
-<section id="projects" class="py-24 px-6 bg-neutral-900">
+<section id="experience" class="py-24 px-6 bg-neutral-900">
     <div class="max-w-300 mx-auto px-2 md:px-12">
         <div class="flex items-center gap-4 mb-16">
             <h2 class="text-3xl font-bold font-mono">Experiencia</h2>
@@ -46,7 +46,7 @@ const experience = [
         <div class="relative border-l border-gray-800 ml-4 md:ml-0 md:pl-8 space-y-12">
             {experience.map((exp) => (
                 <div class="relative pl-8 md:pl-0">
-                    <div class={`absolute w-3 h-3 bg-dark border-2 rounded-full -left-[42px] md:-left-[38px] top-2 ${exp.current ? 'animate-pulse border-[#cfb095]' : 'border-white'}`}></div>
+                    <div class={`absolute w-3 h-3 bg-dark border-2 rounded-full -left-[6px] md:-left-[38px] top-2 ${exp.current ? 'animate-pulse border-[#cfb095]' : 'border-white'}`}></div>
                     <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-2 md:mb-0">
                         <h3 class="text-2xl font-bold text-white">{exp.title}</h3>
                         <span class="font-mono text-md text-[#cfb095] mt-1 md:mt-0">{exp.date}</span>
