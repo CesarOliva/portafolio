@@ -20,22 +20,25 @@ const projects: {
     description: string;
     technologies: Technology[];
     link: string;
+    image?: string;
     span: string;
 }[] = [
-    {
-        title: "Dominoes",
-        slug: "Ecommerce",
-        description: "Ecommerce moderno con autenticacion, checkout, pasarela de pagos, panel de administracion y actualizaciones en tiempo real.",
-        technologies: ["Next.js", "Typescript", "Convex", "Mercado Pago"],
-        link: "https://github.com/CesarOliva/Dominoes",
-        span: "md:col-span-5"
-    },
     {
         title: "Regionerate",
         slug: "Mapa interactivo",
         description: "Plataforma con mapa interactivo para explorar especies nativas de Nuevo Leon y apoyar decisiones de reforestacion con datos.",
         technologies: ["React", "Typescript", "Convex", "Leaflet"],
         link: "https://github.com/deltahbc2/regionerate",
+        image: "/Images/Projects/Regionerate.png",
+        span: "md:col-span-5"
+    },
+    {
+        title: "Dominoes",
+        slug: "Ecommerce",
+        description: "Ecommerce moderno con autenticacion, checkout, pasarela de pagos, panel de administracion y actualizaciones en tiempo real.",
+        technologies: ["Next.js", "Typescript", "Convex", "Mercado Pago"],
+        link: "https://github.com/CesarOliva/Dominoes",
+        image: "/Images/Projects/Dominoes.png",
         span: "md:col-span-3"
     },
     {
@@ -44,6 +47,7 @@ const projects: {
         description: "Aplicación de escritorio para gestionar una biblioteca, permitiendo el registro de libros, usuarios y préstamos.",
         technologies: ["Java", "MySQL"],
         link: "https://github.com/CesarOliva/GestorBiblioteca",
+        image: "/Images/Projects/GestorBiblioteca.png",
         span: "md:col-span-3"
     },
     {
@@ -52,6 +56,7 @@ const projects: {
         description: "Plataforma de aprendizaje y onboarding con landing publica, panel admin, roadmaps generados con IA, manejo de habilidades, quizzes y carga de PDFs.",
         technologies: ["Next.js", "Typescript", "Convex", "Clerk"],
         link: "https://github.com/deltahbc2/Skillpath",
+        image: "/Images/Projects/Skillpath.png",
         span: "md:col-span-5"
     }
 ]
@@ -79,10 +84,12 @@ const projects: {
                         <div class="absolute inset-0 flex items-end justify-between p-6">
                             <div>
                                 <div class="mt-4 text-2xl font-black tracking-tight text-white/90">
-                                    {project.slug}
+                                    {/* {project.slug} */}
                                 </div>
                             </div>
                         </div>
+
+                        <img src={project.image} alt={project.title} class="w-full h-full object-cover">
                     </div>
 
                     <div class="p-8">
