@@ -1,11 +1,32 @@
 ---
+
 import { Monitor, Database, Server, Wrench } from '@lucide/astro';
+
+const content = {
+    'es': {
+        title: "Habilidades",
+        frontend: "Frontend",
+        backend: "Backend",
+        database: "Base de Datos",
+        tools: "Herramientas"
+    },
+    'en': {
+        title: "Skills",
+        frontend: "Frontend",
+        backend: "Backend",
+        database: "Database",
+        tools: "Tools"
+    }
+};
+
+const { lang = 'es' }: { lang?: 'es' | 'en' } = Astro.props.language ? { lang: Astro.props.language } : {};
+
 ---
 
 <section id="skills" class="py-24 px-6 bg-neutral-900">
     <div class="max-w-300 mx-auto px-2 md:px-12">
         <div class="flex items-center gap-4 mb-16">
-            <h2 class="text-3xl font-bold font-mono">Stack Tecnológico</h2>
+            <h2 class="text-3xl font-bold font-mono">{content[lang].title}</h2>
             <div class="h-px grow bg-neutral-800"></div>
         </div>
 
@@ -15,7 +36,7 @@ import { Monitor, Database, Server, Wrench } from '@lucide/astro';
                 <div class="w-12 h-12 rounded-xl bg-neutral-800 flex items-center justify-center mb-6 border border-gray-800">
                     <Monitor class="size-6 text-[#cfb095]"/>
                 </div>
-                <h3 class="text-xl font-semibold mb-6 text-white">Frontend</h3>
+                <h3 class="text-xl font-semibold mb-6 text-white">{content[lang].frontend}</h3>
                 <div class="flex flex-wrap gap-3">
                     <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
                         <i class="fa-brands fa-html5 text-orange-500"></i>HTML/CSS
@@ -40,7 +61,7 @@ import { Monitor, Database, Server, Wrench } from '@lucide/astro';
                 <div class="w-12 h-12 rounded-xl bg-neutral-800 flex items-center justify-center mb-6 border border-gray-800">
                     <Server class="size-6 text-[#cfb095]"/>
                 </div>
-                <h3 class="text-xl font-semibold mb-6 text-white">Backend</h3>
+                <h3 class="text-xl font-semibold mb-6 text-white">{content[lang].backend}</h3>
                 <div class="flex flex-wrap gap-3">
                     <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
                         <i class="fa-brands fa-node-js text-green-500"></i>Node.js
@@ -59,7 +80,7 @@ import { Monitor, Database, Server, Wrench } from '@lucide/astro';
                 <div class="w-12 h-12 rounded-xl bg-neutral-800 flex items-center justify-center mb-6 border border-gray-800">
                     <Database class="size-6 text-[#cfb095]"/>
                 </div>
-                <h3 class="text-xl font-semibold mb-6 text-white">Bases de datos</h3>
+                <h3 class="text-xl font-semibold mb-6 text-white">{content[lang].database}</h3>
                 <div class="flex flex-wrap gap-3">
                     <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
                         <i class="fa-solid fa-database text-[#00628c]"></i>MySQL
@@ -78,7 +99,7 @@ import { Monitor, Database, Server, Wrench } from '@lucide/astro';
                 <div class="w-12 h-12 rounded-xl bg-neutral-800 flex items-center justify-center mb-6 border border-gray-800">
                     <Wrench class="size-6 text-[#cfb095]"/>
                 </div>
-                <h3 class="text-xl font-semibold mb-6 text-white">Herramientas</h3>
+                <h3 class="text-xl font-semibold mb-6 text-white">{content[lang].tools}</h3>
                 <div class="flex flex-wrap gap-3">
                     <span class="px-3 py-1 bg-neutral-800 border border-gray-800 rounded-md text-sm font-mono text-gray-400 flex items-center gap-2">
                         <i class="fa-brands fa-git-alt text-orange-600"></i>Git

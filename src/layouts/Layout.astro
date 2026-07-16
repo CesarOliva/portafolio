@@ -2,117 +2,128 @@
 import '../styles/global.css';
 
 interface Props {
-    title: string;
-    description: string;
-    keywords?: string;
-    location?: string;
-    skills?: string[];
+  title: string;
+  description: string;
+  keywords?: string;
+  location?: string;
+  skills?: string[];
+  locale?: 'es-MX' | 'en-US';
+  ogLocale?: 'es_MX' | 'en_US';
+  language?: 'es' | 'en';
 }
 
 const {
-    title,
-    description,
-    keywords = "desarrollador web, desarrollador frontend, react, next.js, typescript, javascript, html, css, freelancer, Monterrey, web developer",
-    location = "Monterrey, Nuevo León, México",
-    skills = ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "SQL", "MySQL", "WordPress", "Elementor", "Express", "FastAPI", "Git", "Figma", "Linux"]
+  title,
+  description,
+  keywords = "desarrollador web, desarrollador frontend, react, next.js, typescript, javascript, html, css, freelancer, Monterrey, web developer",
+  location = "Monterrey, Nuevo León, México",
+  skills = ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "SQL", "MySQL", "WordPress", "Elementor", "Express", "FastAPI", "Git", "Figma", "Linux"],
+  locale = 'es-MX',
+  ogLocale = 'es_MX',
+  language = 'es',
 } = Astro.props;
+
 ---
 
-<html lang="es-MX">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <meta name="keywords" content={keywords} />
-    <meta name="author" content="César Emilio Oliva Vázquez"/>
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://bycesaroliva.com/"/>
-    <meta name="geo.region" content="MX-NL" />
-    <meta name="geo.placename" content="Monterrey" />
-    
-    <meta property="og:type" content="profile" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content="https://bycesaroliva.com/Images/Profile.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="César Emilio Oliva Vázquez" />
-    <meta property="og:url" content="https://bycesaroliva.com/"/>
-    <meta property="og:locale" content="es_MX" />
-    <meta property="og:site_name" content="ByCesarOliva - Portafolio Desarrollador Frontend Jr y Freelance" />
-    <meta property="profile:first_name" content="César" />
-    <meta property="profile:last_name" content="Oliva" />
-    
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="https://bycesaroliva.com/Images/Profile.png" />
-    <meta name="twitter:image:alt" content="Cesar Oliva - Desarrollador Frontend Jr" />
-    
-    <!-- Schema.org (Google) - Person -->
-    <script type="application/ld+json">
-      {JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "César Emilio Oliva Vázquez",
-        "alternateName": "César Oliva",
-        "url": "https://bycesaroliva.com/",
-        "image": "https://bycesaroliva.com/Images/Profile.png",
-        "description": description,
-        "jobTitle": "Desarrollador Frontend Jr | Freelance",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Freelance"
-        },
-        "alumniOf": {
-          "@type": "EducationalOrganization",
-          "name": "Instituto Tecnológico de Nuevo León",
-          "description": "Ingeniería en Sistemas Computacionales"
-        },
-        "telephone": "+52 81 3041 6824",
-        "email": "cesaroliva.work@gmail.com",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Monterrey",
-          "addressRegion": "Nuevo León",
-          "addressCountry": "MX"
-        },
-        "knowsAbout": skills,
-        "sameAs": [
-          "https://www.linkedin.com/in/olivavc/",
-          "https://github.com/CesarOliva",
-          url
-        ],
-        "nationality": "MX",
-        "gender": "Male"
-      })}
-    </script>
+<html lang={locale}>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="keywords" content={keywords} />
+  <meta name="author" content="César Emilio Oliva Vázquez"/>
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href='https://bycesaroliva.com/'/>
+  <meta name="geo.region" content="MX-NL" />
+  <meta name="geo.placename" content="Monterrey" />
+  
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content="https://bycesaroliva.com/Images/Profile.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="César Emilio Oliva Vázquez" />
+  <meta property="og:url" content='https://bycesaroliva.com/'/>
+  <meta property="og:locale" content={ogLocale} />
+  <meta property="og:site_name" content={title} />
+  <meta property="profile:first_name" content="César" />
+  <meta property="profile:last_name" content="Oliva" />
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content="https://bycesaroliva.com/Images/Profile.png" />
+  <meta name="twitter:image:alt" content="Cesar Oliva - Desarrollador Frontend Jr" />
+  
+  <!-- Schema.org (Google) - Person -->
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "César Emilio Oliva Vázquez",
+      "alternateName": "César Oliva",
+      "url": "https://bycesaroliva.com/",
+      "image": "https://bycesaroliva.com/Images/Profile.png",
+      "description": description,
+      "jobTitle": "Frontend Developer Jr | Freelance",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Instituto Tecnológico de Nuevo León",
+        "description": "Ingeniería en Sistemas Computacionales"
+      },
+      "telephone": "+52 81 3041 6824",
+      "email": "cesaroliva.work@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Monterrey",
+        "addressRegion": "Nuevo León",
+        "addressCountry": "MX"
+      },
+      "knowsAbout": skills,
+      "sameAs": [
+        "https://www.linkedin.com/in/olivavc/",
+        "https://github.com/CesarOliva"
+      ],
+      "nationality": "MX",
+      "gender": "Male"
+    })}
+  </script>
 
-    <script type="application/ld+json">
-      {JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "ByCesarOliva - Portafolio Desarrollador Frontend Jr y Freelance",
-        "url": "https://bycesaroliva.com/",
-        "author": {
-          "@type": "Person",
-          "name": "César Emilio Oliva Vázquez"
-        },
-        "inLanguage": "es-MX"
-      })}
-    </script>
-    
-    <link rel="icon" href="/Images/Profile.png" />
-    <meta name="generator" content={Astro.generator} />
-    
-    <script src="https://kit.fontawesome.com/17383348a8.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "ByCesarOliva",
+      "url": "https://bycesaroliva.com/",
+      "author": {
+        "@type": "Person",
+        "name": "César Emilio Oliva Vázquez"
+      },
+      "inLanguage": locale
+    })}
+  </script>
+  
+  <link rel="icon" href="/Images/Profile.png" />
+  <meta name="generator" content={Astro.generator} />
+  
+  <script src="https://kit.fontawesome.com/17383348a8.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 </head>
 <body class="antialiased">
-    <slot />
+    <a 
+      class="fixed right-6 top-6 z-50 rounded-full border border-[#ab805a]/30 bg-neutral-950/90 px-4 py-2 text-sm font-semibold text-white backdrop-blur transition-colors hover:border-[#ab805a]/60 hover:bg-neutral-900" 
+      href={language === 'es' ? '/en' : '/'}>
+      {language === 'es' ? 'EN' : 'ES'}
+    </a>
+  <slot />
 </body>
 </html>

@@ -1,10 +1,35 @@
+---
+
+const content = {
+    'es': {
+        title: "Sobre mí",
+        paragraphs: [
+            "Desarrollador frontend con más de 4 años de experiencia en la creación de sitios web, landing pages, tiendas en línea y soluciones personalizadas. Me especializo en React, Next.js y TypeScript, y me apasiona crear experiencias de usuario atractivas y funcionales.",
+            "Mi objetivo es seguir creciendo como profesional, aprendiendo nuevas tecnologías y contribuyendo a proyectos innovadores que tengan un impacto positivo en la vida de las personas."
+        ],
+        imageAlt: "Foto de perfil de César Oliva"
+    },
+    'en': {
+        title: "About Me",
+        paragraphs: [
+            "Frontend developer with over 4 years of experience in creating websites, landing pages, online stores, and custom solutions. I specialize in React, Next.js, and TypeScript, and I am passionate about creating attractive and functional user experiences.",
+            "My goal is to continue growing as a professional, learning new technologies, and contributing to innovative projects that have a positive impact on people's lives."
+        ],
+        imageAlt: "Profile picture of César Oliva"
+    },
+};
+
+const { lang = 'es' }: { lang?: 'es' | 'en' } = Astro.props.language ? { lang: Astro.props.language } : {};
+
+---
+
 <section id="about" class="pt-4 pb-12 md:pt-8 px-8 md:px-12 max-w-300 mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
         <div class="space-y-4">
-            <h2 class="text-3xl md:text-4xl font-bold font-mono text-[#ab805a]">Sobre mí</h2>
+            <h2 class="text-3xl md:text-4xl font-bold font-mono text-[#ab805a]">{content[lang].title}</h2>
             <p class="text-lg md:text-xl text-gray-400">
-                Disfruto desarrollar software que ayude a las personas y a las empresas a tener un mejor control de sus procesos. Mi trabajo se centra principalmente en el desarrollo web, combinando funcionalidad, rendimiento e interfaces intuitivas.<br/><br/>
-                Me interesan especialmente las herramientas para negocios, los proyectos experimentales y las soluciones tecnológicas que resuelven problemas reales de forma práctica y eficiente.
+                {content[lang].paragraphs[0]}<br/><br/>
+                {content[lang].paragraphs[1]}
             </p>
         </div>
 
@@ -12,7 +37,7 @@
             <div class="absolute -inset-1 bg-linear-to-r max-w-lg from-[#ab805a]/50 to-[#cfb095]/50 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
 
             <div class="relative rounded-2xl overflow-hidden aspect-square max-w-lg bg-neutral-800 border border-gray-800">
-                <img class="w-full h-full object-cover " src="/Images/Profile.png" alt="Foto de perfil" />
+                <img class="w-full h-full object-cover " src="/Images/Profile.png" alt={content[lang].imageAlt} />
             </div>
         </div>
     </div>

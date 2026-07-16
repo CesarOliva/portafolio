@@ -1,50 +1,88 @@
 ---
 
-const experience = [
-    {
-        title: "Web Developer",
-        place: "Freelancer",
-        date: "Sep 2021 — Presente",
-        description: [
-            "Desarrollo de sitios web, landing pages, tiendas en línea y sistemas personalizados para negocios y emprendedores.",
-            "Levantamiento de requerimientos, planificación de proyectos y comunicación directa con clientes.",
-            "Despliegue, mantenimiento y optimización de aplicaciones web para mejorar rendimiento y experiencia de usuario."
-        ],
-        current: true
-    },
-    {
-        title: "Web Developer & IT Support",
-        place: "PSE Iluminación",
-        date: "Dic 2023 — Mar 2025",
-        description: [
-            "Desarrollo y mantenimiento del sitio web corporativo y tienda en línea de la empresa.",
-            "Creación de scripts y herramientas para automatizar tareas operativas y reducir trabajo manual.",
-            "Configuración y soporte de sistemas utilizados en las operaciones diarias de la empresa."
-        ],
-    },
-    {
-        title: "WordPress Developer",
-        place: "Primero En Publicidad",
-        date: "Jul 2021 — Sep 2021",
-        description: [
-            "Desarrollo y personalización de sitios web utilizando WordPress.",
-            "Adaptación de diseños responsivos para distintos dispositivos y navegadores.",
-            "Colaboración con equipos de diseño y marketing en proyectos para clientes."
-        ],
-    }
-]
+const experienceContent = {
+    'es': [
+        {
+            title: "Web Developer",
+            place: "Freelancer",
+            date: "Sep 2021 — Presente",
+            description: [
+                "Desarrollo de sitios web, landing pages, tiendas en línea y sistemas personalizados para negocios y emprendedores.",
+                "Levantamiento de requerimientos, planificación de proyectos y comunicación directa con clientes.",
+                "Despliegue, mantenimiento y optimización de aplicaciones web para mejorar rendimiento y experiencia de usuario."
+            ],
+            current: true
+        },
+        {
+            title: "Web Developer & IT Support",
+            place: "PSE Iluminación",
+            date: "Dic 2023 — Mar 2025",
+            description: [
+                "Desarrollo y mantenimiento del sitio web corporativo y tienda en línea de la empresa.",
+                "Creación de scripts y herramientas para automatizar tareas operativas y reducir trabajo manual.",
+                "Configuración y soporte de sistemas utilizados en las operaciones diarias de la empresa."
+            ],
+        },
+        {
+            title: "WordPress Developer",
+            place: "Primero En Publicidad",
+            date: "Jul 2021 — Sep 2021",
+            description: [
+                "Desarrollo y personalización de sitios web utilizando WordPress.",
+                "Adaptación de diseños responsivos para distintos dispositivos y navegadores.",
+                "Colaboración con equipos de diseño y marketing en proyectos para clientes."
+            ],
+        }
+    ],
+    'en': [
+        {
+            title: "Web Developer",
+            place: "Freelancer",
+            date: "Sep 2021 — Present",
+            description: [
+                "Development of websites, landing pages, online stores, and custom systems for businesses and entrepreneurs.",
+                "Requirements gathering, project planning, and direct communication with clients.",
+                "Deployment, maintenance, and optimization of web applications to improve performance and user experience."
+            ],
+            current: true
+        },
+        {
+            title: "Web Developer & IT Support",
+            place: "PSE Iluminación",
+            date: "Dec 2023 — Mar 2025",
+            description: [
+                "Development and maintenance of the company's corporate website and online store.",
+                "Creation of scripts and tools to automate operational tasks and reduce manual work.",
+                "Configuration and support of systems used in the company's daily operations."
+            ],
+        },
+        {
+            title: "WordPress Developer",
+            place: "Primero En Publicidad",
+            date: "Jul 2021 — Sep 2021",
+            description: [
+                "Development and customization of websites using WordPress.",
+                "Adaptation of responsive designs for different devices and browsers.",
+                "Collaboration with design and marketing teams on client projects."
+            ],
+        }
+    ]
+}
+
+const { lang = 'es' }: { lang?: 'es' | 'en' } = Astro.props.language ? { lang: Astro.props.language } : {};
+const experience = experienceContent[lang];
 
 ---
 
 <section id="experience" class="py-24 px-6 bg-neutral-900">
     <div class="max-w-300 mx-auto px-2 md:px-12">
         <div class="flex items-center gap-4 mb-16">
-            <h2 class="text-3xl font-bold font-mono">Experiencia</h2>
+            <h2 class="text-3xl font-bold font-mono">{lang === 'es' ? 'Experiencia Profesional' : 'Professional Experience'}</h2>
             <div class="h-px grow bg-neutral-800"></div>
         </div>
 
         <div class="relative border-l border-gray-800 ml-4 md:ml-0 md:pl-8 space-y-12">
-            {experience.map((exp) => (
+            {experience.map((exp: any) => (
                 <div class="relative pl-8 md:pl-0">
                     <div class={`absolute w-3 h-3 bg-dark border-2 rounded-full -left-[6px] md:-left-[38px] top-2 ${exp.current ? 'animate-pulse border-[#cfb095]' : 'border-white'}`}></div>
                     <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-2 md:mb-0">
@@ -53,7 +91,7 @@ const experience = [
                     </div>
                     <h4 class="text-lg text-[#cfb095] mb-4">{exp.place}</h4>
                     <ul class="space-y-3 text-gray-400 text-md">
-                        {exp.description.map((desc) => (
+                        {exp.description.map((desc: string) => (
                             <li class="flex items-start gap-3">
                                 <i class="text-[#cfb095] text-xs fa-solid fa-caret-right mt-1"></i>
                                 <span>{desc}</span>

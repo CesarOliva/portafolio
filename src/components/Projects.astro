@@ -14,7 +14,7 @@ const icons = {
 
 type Technology = keyof typeof icons;
 
-const projects: {
+type Project = {
     title: string;
     slug: string;
     description: string;
@@ -22,56 +22,103 @@ const projects: {
     link: string;
     image?: string;
     span: string;
-}[] = [
-    {
-        title: "Regionerate",
-        slug: "Mapa interactivo",
-        description: "Plataforma con mapa interactivo para explorar especies nativas de Nuevo Leon y apoyar decisiones de reforestacion con datos.",
-        technologies: ["React", "Typescript", "Convex", "Leaflet"],
-        link: "https://github.com/deltahbc2/regionerate",
-        image: "/Images/Projects/Regionerate.png",
-        span: "md:col-span-5"
-    },
-    {
-        title: "Dominoes",
-        slug: "Ecommerce",
-        description: "Ecommerce moderno con autenticacion, checkout, pasarela de pagos, panel de administracion y actualizaciones en tiempo real.",
-        technologies: ["Next.js", "Typescript", "Convex", "Mercado Pago"],
-        link: "https://github.com/CesarOliva/Dominoes",
-        image: "/Images/Projects/Dominoes.png",
-        span: "md:col-span-3"
-    },
-    {
-        title: "Gestor Biblioteca",
-        slug: "App de escritorio",
-        description: "Aplicación de escritorio para gestionar una biblioteca, permitiendo el registro de libros, usuarios y préstamos.",
-        technologies: ["Java", "MySQL"],
-        link: "https://github.com/CesarOliva/GestorBiblioteca",
-        image: "/Images/Projects/GestorBiblioteca.png",
-        span: "md:col-span-3"
-    },
-    {
-        title: "Skillpath",
-        slug: "AI + onboarding",
-        description: "Plataforma de aprendizaje y onboarding con landing publica, panel admin, roadmaps generados con IA, manejo de habilidades, quizzes y carga de PDFs.",
-        technologies: ["Next.js", "Typescript", "Convex", "Clerk"],
-        link: "https://github.com/deltahbc2/Skillpath",
-        image: "/Images/Projects/Skillpath.png",
-        span: "md:col-span-5"
-    }
-]
+};
+
+const projectsContent: Record<'es' | 'en', Project[]> = {
+    es: [
+        {
+            title: "Regionerate",
+            slug: "Mapa interactivo",
+            description: "Plataforma con mapa interactivo para explorar especies nativas de Nuevo León y apoyar decisiones de reforestación con datos.",
+            technologies: ["React", "Typescript", "Convex", "Leaflet"],
+            link: "https://github.com/deltahbc2/regionerate",
+            image: "/Images/Projects/Regionerate.png",
+            span: "md:col-span-5"
+        },
+        {
+            title: "Dominoes",
+            slug: "Ecommerce",
+            description: "Ecommerce moderno con autenticación, checkout, pasarela de pagos, panel de administración y actualizaciones en tiempo real.",
+            technologies: ["Next.js", "Typescript", "Convex", "Mercado Pago"],
+            link: "https://github.com/CesarOliva/Dominoes",
+            image: "/Images/Projects/Dominoes.png",
+            span: "md:col-span-3"
+        },
+        {
+            title: "Gestor Biblioteca",
+            slug: "App de escritorio",
+            description: "Aplicación de escritorio para gestionar una biblioteca, permitiendo el registro de libros, usuarios y préstamos.",
+            technologies: ["Java", "MySQL"],
+            link: "https://github.com/CesarOliva/GestorBiblioteca",
+            image: "/Images/Projects/GestorBiblioteca.png",
+            span: "md:col-span-3"
+        },
+        {
+            title: "Skillpath",
+            slug: "IA + onboarding",
+            description: "Plataforma de aprendizaje y onboarding con landing pública, panel admin, roadmaps generados con IA, manejo de habilidades, quizzes y carga de PDFs.",
+            technologies: ["Next.js", "Typescript", "Convex", "Clerk"],
+            link: "https://github.com/deltahbc2/Skillpath",
+            image: "/Images/Projects/Skillpath.png",
+            span: "md:col-span-5"
+        }
+    ],
+
+    en: [
+        {
+            title: "Regionerate",
+            slug: "Interactive Map",
+            description: "Platform with an interactive map to explore native species of Nuevo León and support reforestation decisions using data.",
+            technologies: ["React", "Typescript", "Convex", "Leaflet"],
+            link: "https://github.com/deltahbc2/regionerate",
+            image: "/Images/Projects/Regionerate.png",
+            span: "md:col-span-5"
+        },
+        {
+            title: "Dominoes",
+            slug: "E-commerce",
+            description: "Modern e-commerce platform with authentication, checkout, payment gateway, admin dashboard, and real-time updates.",
+            technologies: ["Next.js", "Typescript", "Convex", "Mercado Pago"],
+            link: "https://github.com/CesarOliva/Dominoes",
+            image: "/Images/Projects/Dominoes.png",
+            span: "md:col-span-3"
+        },
+        {
+            title: "Library Manager",
+            slug: "Desktop App",
+            description: "Desktop application for library management, including books, users, and loan tracking.",
+            technologies: ["Java", "MySQL"],
+            link: "https://github.com/CesarOliva/GestorBiblioteca",
+            image: "/Images/Projects/GestorBiblioteca.png",
+            span: "md:col-span-3"
+        },
+        {
+            title: "Skillpath",
+            slug: "AI + Onboarding",
+            description: "Learning and onboarding platform with a public landing page, admin dashboard, AI-generated roadmaps, skill management, quizzes, and PDF uploads.",
+            technologies: ["Next.js", "Typescript", "Convex", "Clerk"],
+            link: "https://github.com/deltahbc2/Skillpath",
+            image: "/Images/Projects/Skillpath.png",
+            span: "md:col-span-5"
+        }
+    ]
+};
+
+const { lang = 'es' }: { lang?: 'es' | 'en' } = Astro.props.language ? { lang: Astro.props.language } : {};
+
+const projects = projectsContent[lang];
 
 ---
 
 <section id="projects" class="py-24 px-6">
     <div class="max-w-300 mx-auto px-2 md:px-12">
         <div class="flex items-center gap-4 mb-16">
-            <h2 class="text-3xl font-bold font-mono">Proyectos Destacados</h2>
+            <h2 class="text-3xl font-bold font-mono">{lang === 'es' ? 'Proyectos Destacados' : 'Featured Projects'}</h2>
             <div class="h-px grow bg-neutral-800"></div>
         </div>
 
         <div class="grid md:grid-cols-8 gap-6">
-            {projects.map((project) => (
+            {projects.map((project: Project) => (
                 <a
                     href={project.link}
                     target="_blank"
