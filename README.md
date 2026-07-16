@@ -1,43 +1,44 @@
-# Astro Starter Kit: Minimal
+# Portafolio de Cesar Oliva
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Portafolio personal desarrollado con [Astro](https://astro.build/), pensado para mostrar mi experiencia como desarrollador frontend, mis habilidades tecnicas y algunos de mis proyectos mas destacados.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+El sitio incluye version en espanol e ingles, secciones de presentacion, experiencia, tecnologias, proyectos y contacto.
 
-## 🚀 Project Structure
+## Vista general
 
-Inside of your Astro project, you'll see the following folders and files:
+- Presentacion principal con descarga de CV
+- Seccion "Sobre mi"
+- Stack de tecnologias
+- Proyectos destacados con imagenes y enlaces
+- Experiencia profesional
+- Formulario de contacto
+- Soporte multilenguaje: `es` / `en`
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Tecnologias
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- Astro
+- React
+- TypeScript
+- Tailwind CSS
+- Lucide Icons
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Proyectos destacados
 
-Any static assets, like images, can be placed in the `public/` directory.
+Algunos de los proyectos que aparecen en el portafolio son:
 
-## 🧞 Commands
+- Regionerate
+- Dominoes
+- Gestor de Biblioteca
+- Skillpath
 
-All commands are run from the root of the project, from a terminal:
+Tambien puedes encontrar otros proyectos enlazados desde el archivo [`projects.md`](./projects.md).
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Contacto
 
-## 👀 Want to learn more?
+- GitHub: [CesarOliva](https://github.com/CesarOliva)
+- Correo: `cesaroliva.work@gmail.com`
+- Ubicacion: Monterrey, Mexico
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## English
+
+This is my personal portfolio built with Astro. It showcases my frontend experience, selected projects, work history, skills, and contact information. The site includes both Spanish and English versions.
