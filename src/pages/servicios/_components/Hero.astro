@@ -19,7 +19,7 @@ const content = {
     "en": {
         title: "Specialists in Digital Solutions",
         subtitle: "Websites and Ecommerce",
-        description: "We specialize in:",
+        description: "Specialized in:",
         services: [
             { name: "Landing Pages"},
             { name: "Websites"},
@@ -36,7 +36,7 @@ const { lang = 'es' }: { lang?: 'es' | 'en' } = Astro.props.language ? { lang: A
 
 ---
 
-<section id="hero" class="min-h-screen max-w-300 mx-auto flex items-center justify-center pt-36 pb-24">
+<section id="hero" class="min-h-screen max-w-300 mx-auto flex items-center justify-center pt-36 pb-24 md:pt-0 md:pb-0">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center px-8 md:px-12">
         <div>
             <h1 class="text-white font-semibold text-4xl md:text-5xl">{content[lang].title}<br/>
@@ -73,7 +73,7 @@ const { lang = 'es' }: { lang?: 'es' | 'en' } = Astro.props.language ? { lang: A
         </div>
 
         <div class="flex justify-center md:justify-end mt-8 md:mt-0">
-            <img src="Images/hero.svg" alt="Portafolio Cesar Oliva | Soluciones Digitales" class="max-h-[80vh] object-contain">
+            <img src="/Images/hero.svg" alt="Portafolio Cesar Oliva | Soluciones Digitales" class="max-h-[80vh] object-contain">
         </div>
 
     </div>
