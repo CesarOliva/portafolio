@@ -1,0 +1,48 @@
+---
+
+import { Rocket, MonitorSmartphone, Store, MonitorCog,  Wrench, Search } from '@lucide/astro';
+
+---
+
+<section class="min-h-screen max-w-300 mx-auto flex items-center justify-center">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center px-8 md:px-12">
+        <div>
+            <h1 class="text-white font-semibold text-4xl md:text-5xl">Especialistas en Soluciones Digitales<br/>
+                <span class="text-black bg-[#FCED65] inline-block px-4 py-1 mt-4 md:w-100 lg:w-125">Páginas Web <br/>y Ecommerce</span>
+            </h1>
+           
+            <p class="text-white text-xl text-center mt-6">Nos especializamos en:</p>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+                <div class="flex flex-col items-center">
+                    <Rocket class="size-12 text-white" />
+                    <p class="text-white font-semibold mt-2">Landing Pages</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <MonitorSmartphone class="size-12 text-white" />
+                    <p class="text-white font-semibold mt-2">Sitios Web</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <Store class="size-12 text-white" />
+                    <p class="text-white font-semibold mt-2">Tiendas Online</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <MonitorCog class="size-12 text-white" />
+                    <p class="text-white font-semibold mt-2">Sistemas a medida</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <Search class="size-12 text-white" />
+                    <p class="text-white font-semibold mt-2">SEO Básico</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <Wrench class="size-12 text-white" />
+                    <p class="text-white font-semibold mt-2">Soporte Técnico</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center md:justify-end mt-8 md:mt-0">
+            <img src="Images/hero.svg" alt="Portafolio Cesar Oliva | Soluciones Digitales" class="max-h-[80vh] object-contain">
+        </div>
+
+    </div>
+</section>
