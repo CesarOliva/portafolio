@@ -1,0 +1,154 @@
+---
+
+type Project = {
+    title: string;
+    slug: string;
+    link: string;
+    image?: string;
+    span: string;
+    color?: string;
+};
+
+const projectsContent: Record<'es' | 'en', Project[]> = {
+    es: [
+        {
+            title: "Dominoes",
+            slug: "E-COMMERCE",
+            link: "https://www.mesasdejuego.com/",
+            image: "/Images/Projects/Dominoes.png",
+            span: "md:col-span-5",
+            color: "bg-[#B86112]/50 border-[#B86112]"
+        },
+        {
+            title: "Global Midstream Services",
+            slug: "INDUSTRIA",
+            link: "https://global-midstream.com/",
+            image: "/Images/Projects/GMS2.png",
+            span: "md:col-span-3",
+            color: "bg-[#980b0b]/50 border-[#980b0b]"
+        },
+        {
+            title: "PSE Iluminación",
+            slug: "Empresarial",
+            link: "https://www.pseiluminacion.com/",
+            image: "/Images/Projects/PSE.png",
+            span: "md:col-span-3",
+            color: "bg-[#F26836]/50 border-[#F26836]"
+        },
+        {
+            title: "Exito y Salud",
+            slug: "Portafolio",
+            link: "https://saravazquez.com.mx/",
+            image: "/Images/Projects/ExitoYSalud.png",
+            span: "md:col-span-5",
+            color: "bg-[#00348e]/50 border-[#00348e]"
+        },
+        {
+            title: "Intermed Krevati",
+            slug: "Landing Page",
+            link: "https://www.intermedkrevati.com/",
+            image: "/Images/Projects/Krevati.png",
+            span: "md:col-span-3",
+            color: "bg-[#3fb84d]/50 border-[#3fb84d]"
+        },
+        {
+            title: "Rifas HC",
+            slug: "A medida",
+            link: "https://rifashc.com/",
+            image: "/Images/Projects/RifasHC.png",
+            span: "md:col-span-3",
+            color: "bg-[#f6d061]/50 border-[#f6d061]"
+        }
+    ],
+
+    en: [
+        {
+            title: "Dominoes",
+            slug: "E-COMMERCE",
+            link: "https://www.mesasdejuego.com/",
+            image: "/Images/Projects/Dominoes.png",
+            span: "md:col-span-5",
+            color: "bg-[#B86112]/50 border-[#B86112]"
+        },
+        {
+            title: "Global Midstream Services",
+            slug: "Industry",
+            link: "https://global-midstream.com/",
+            image: "/Images/Projects/GMS2.png",
+            span: "md:col-span-3",
+            color: "bg-[#980b0b]/50 border-[#980b0b]"
+        },
+        {
+            title: "PSE Iluminación",
+            slug: "Enterprise",
+            link: "https://www.pseiluminacion.com/",
+            image: "/Images/Projects/PSE.png",
+            span: "md:col-span-3",
+            color: "bg-[#F26836]/50 border-[#F26836]"
+        },
+        {
+            title: "Exito y Salud",
+            slug: "Portfolio",
+            link: "https://saravazquez.com.mx/",
+            image: "/Images/Projects/ExitoYSalud.png",
+            span: "md:col-span-5",
+            color: "bg-[#00348e]/50 border-[#00348e]"
+        },{
+            title: "Intermed Krevati",
+            slug: "Landing Page",
+            link: "https://www.intermedkrevati.com/",
+            image: "/Images/Projects/Krevati.png",
+            span: "md:col-span-3",
+            color: "bg-[#3fb84d]/50 border-[#3fb84d]"
+        },
+        {
+            title: "Rifas HC",
+            slug: "Custom",
+            link: "https://rifashc.com/",
+            image: "/Images/Projects/RifasHC.png",
+            span: "md:col-span-3",
+            color: "bg-[#f6d061]/50 border-[#f6d061]"
+        }
+    ]
+};
+
+const { lang = 'es' }: { lang?: 'es' | 'en' } = Astro.props.language ? { lang: Astro.props.language } : {};
+
+const projects = projectsContent[lang];
+
+---
+
+<section id="projects" class="py-24 px-6 bg-neutral-900">
+    <div class="max-w-300 mx-auto px-2 md:px-12">
+        <div class="flex items-center gap-4 mb-16">
+            <h2 class="text-3xl font-bold font-mono">{lang === 'es' ? 'Trabajos destacados' : 'My Latest Work'}</h2>
+            <div class="h-px grow bg-neutral-800"></div>
+        </div>
+
+        <div class="grid md:grid-cols-9 gap-6">
+            {projects.map((project: Project) => (
+                <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    class={`col-span-3 flex items-center justify-center`}
+                >
+                    <article class="group relative overflow-hidden rounded-2xl w-full h-60 md:h-70 shadow-xl">
+                        <img
+                            src={project.image}
+                            alt={project.title}
+                            class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+
+                        <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-black/10"></div>
+
+                        <div class="absolute bottom-0 left-0 p-6 md:p-4">
+                            <span class={`inline-flex items-center rounded-full px-3 py-2 text-[10px] uppercase font-medium border ${project.color}`}>{project.slug}</span>
+                            <h3 class="mt-2 text-xl md:text-2xl font-semibold text-white">{project.title}</h3>
+                        </div>
+                    </article>
+                </a>
+            ))}
+        </div>
+    </div>
+</section>

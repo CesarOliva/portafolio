@@ -1,0 +1,160 @@
+---
+
+import { Check } from '@lucide/astro';
+
+const content = {
+    es: {
+        title: 'Inversión',
+        subtitle: 'Planes adaptados según las necesidades y presupuesto de tu proyecto',
+        plans: [
+            {
+                name: 'Landing Page',
+                price: '$4,000',
+                currency: 'MXN',
+                features: [
+                    '1 Sección principal',
+                    'Diseño personalizado',
+                    'Optimización para dispositivos móviles',
+                    'Formulario de contacto',
+                    'Configuración básica para buscadores',
+                    '5 Correos corporativos',
+                    'Hosting y dominio gratis (1 año)',
+                ],
+                link: 'https://wa.me/528147990195?text=Hola%21,%20Me%20interesa%20el%20plan%20de%20Landing%20Page',
+            },
+            {
+                name: 'Sitio Empresarial',
+                price: '$6,000',
+                currency: 'MXN',
+                features: [
+                    'Hasta 5 secciones',
+                    'Diseño personalizado',
+                    'Optimización para dispositivos móviles',
+                    'Formulario de contacto',
+                    'Configuración básica para buscadores',
+                    '5 Correos corporativos',
+                    'Hosting y dominio gratis (1 año)',
+                ],
+                link: 'https://wa.me/528147990195?text=Hola%21,%20Me%20interesa%20el%20plan%20de%20Sitio%20Empresarial',
+                recomended: true
+            },
+            {
+                name: 'Tienda en linea',
+                price: '$12,000',
+                currency: 'MXN',
+                features: [
+                    'Diseño personalizado',
+                    'Optimización para dispositivos móviles',
+                    'Configuración de tienda y carga de productos',
+                    'Integración de pasarela de pago',
+                    'Configuración básica para buscadores',
+                    'Sesiones de capacitación',
+                    '5 Correos corporativos',
+                    'Hosting y dominio gratis (1 año)',
+                ],
+                link: 'https://wa.me/528147990195?text=Hola%21,%20Me%20interesa%20el%20plan%20de%20Tienda%20en%20linea',
+            },
+            {
+                name: 'Personalizado',
+                price: 'Cotizar',
+                features: ["Si tu proyecto requiere de un sistema personalizado, no dudes en contactarme para cotizarlo."],
+                link: 'https://wa.me/528147990195?text=Hola%21,%20Me%20interesa%20cotizar%20un%20sistema%20personalizado'
+            }
+        ]
+    },
+    "en": {
+        title: 'Investment',
+        subtitle: 'Plans tailored to the needs and budget of your project',
+        plans: [
+            {
+                name: 'Landing Page',
+                price: '$300',
+                currency: 'USD',
+                features: [
+                    '1 Main section',
+                    'Custom design',
+                    'Mobile optimization',
+                    'Contact form',
+                    'Basic search engine configuration',
+                    '5 Corporate emails',
+                    'Free hosting and domain (1 year)',
+                ],
+                link: 'https://wa.me/528147990195?text=Hello%21,%20I%20am%20interested%20in%20the%20Landing%20Page%20plan',
+            },
+            {
+                name: 'Business Site',
+                price: '$450',
+                currency: 'USD',
+                features: [
+                    'Up to 5 sections',
+                    'Custom design',
+                    'Mobile optimization',
+                    'Contact form',
+                    'Basic search engine configuration',
+                    '5 Corporate emails',
+                    'Free hosting and domain (1 year)',
+                ],
+                link: 'https://wa.me/528147990195?text=Hello%21,%20I%20am%20interested%20in%20the%20Business%20Site%20plan',
+                recomended: true
+            },
+            {
+                name: 'Online Store',
+                price: '$900',
+                currency: 'USD',
+                features: [
+                    'Custom design',
+                    'Mobile optimization',
+                    'Store setup and product upload',
+                    'Payment gateway integration',
+                    'Basic search engine configuration',
+                    'Training sessions',
+                    '5 Corporate emails',
+                    'Free hosting and domain (1 year)',
+                ],
+                link: 'https://wa.me/528147990195?text=Hello%21,%20I%20am%20interested%20in%20the%20Online%20Store%20plan',
+            },
+            {
+                name: 'Custom',
+                price: 'Quote',
+                features: ["If your project requires a custom system, do not hesitate to contact me for a quote."],
+                link: 'https://wa.me/528147990195?text=Hello%21,%20I%20am%20interested%20in%20a%20customized%20system'
+            }
+        ]
+    }
+};
+
+const { lang = 'es' }: { lang?: 'es' | 'en' } = Astro.props.language ? { lang: Astro.props.language } : {};
+
+---
+
+<section id="pricing" class="py-24 px-6 bg-neutral-900">
+    <div class="max-w-320 mx-auto px-2 md:px-12">
+        <h2 class="text-white text-5xl font-bold text-center mb-6">{content[lang].title}</h2>
+        <p class="text-white text-xl text-center mb-8">{content[lang].subtitle}</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4">
+            {content[lang].plans.map((plan) => (
+                <div class={`bg-neutral-800 border ${plan.recomended ? 'border-[#ab805a]' : 'border-[#cfb095]/10 hover:border-[#ab805a]/50'} transition-colors p-8 rounded-3xl flex flex-col relative`}>
+                    {plan.recomended && (
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#ab805a] text-black px-4 py-1 rounded-full text-sm font-bold">{lang === 'es' ? 'RECOMENDADO' : 'RECOMMENDED'}</div>
+                    )}
+
+                    <h3 class="font-semibold text-lg text-neutral-300 mb-2">{plan.name}</h3>
+                    <div class="font-bold text-[#ab805a] text-5xl mb-6">{plan.price}<span class="font-medium text-sm"> {plan.currency}</span></div>
+
+                    <ul class="space-y-4 mb-8 grow">
+                        {plan.features.map((feature) => (
+                            <li class="flex items-center gap-2 text-white text-md">
+                                <Check class="text-[#ab805a] size-5 shrink-0" />{feature}
+                            </li>
+                        ))}
+                    </ul>
+                    <button class="w-full py-3 rounded-xl border border-[#ab805a] text-[#ab805a] font-bold hover:bg-[#ab805a]/10 transition-colors cursor-pointer">
+                        <a href={plan.link} target="_blank" class="text-[#ab805a]">{lang === 'es' ? 'Me interesa' : 'I\'m interested'}</a>
+                    </button>
+                </div>
+            ))}
+
+        </div>
+    </div>
+</section>

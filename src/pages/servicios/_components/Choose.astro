@@ -1,0 +1,99 @@
+---
+
+const content = {
+    "es": {
+        title: "Por qué elegirnos",
+        subtitle: "Calidad y profesionalismo en cada proyecto. Ofrecemos una variedad de servicios para llevar tu proyecto al siguiente nivel.",
+        chooses: [
+            {
+                name: "Diseño Profesional",
+                description: "Interfaces estéticas y funcionales que mejoran la experiencia del usuario.",
+                icon: "fa-solid fa-paintbrush"
+            },
+            {
+                name: "Responsive (Móvil y Escritorio)",
+                description: "Tu sitio web se verá y funcionará perfectamente en cualquier dispositivo.",
+                icon: "fa-solid fa-mobile-screen"
+            },
+            {
+                name: "SEO y Optimización",
+                description: "Estructuramos y optimizamos su rendimiento.",
+                icon: "fa-solid fa-magnifying-glass"
+            },
+            {
+                name: "Integración de redes sociales",
+                description: "Integración de redes sociales para aumentar la visibilidad y el alcance de tu marca.",
+                icon: "fa-solid fa-message"
+            },
+            {
+                name: "Mantenimiento y soporte",
+                description: "Ofrecemos mantenimiento y soporte continuo para garantizar que tu sitio web funcione sin problemas.",
+                icon: "fa-solid fa-headset"
+            },
+            {
+                name: "Seguridad y protección de datos",
+                description: "Implementamos medidas de seguridad para proteger tu sitio web y los datos de tus usuarios.",
+                icon: "fa-solid fa-shield-halved"
+            },
+        ],
+    },
+    "en": {
+        title: "Why Choose Us",
+        subtitle: "Quality and professionalism in every project. We offer a variety of services to take your project to the next level.",
+        chooses: [
+            {
+                name: "Professional Design",
+                description: "Aesthetic and functional interfaces that improve the user experience.",
+                icon: "fa-solid fa-paintbrush"
+            },
+            {
+                name: "Responsive (Mobile and Desktop)",
+                description: "Your website will look and function perfectly on any device.",
+                icon: "fa-solid fa-mobile-screen"
+            },
+            {
+                name: "SEO and Optimization",
+                description: "We structure and optimize your performance.",
+                icon: "fa-solid fa-magnifying-glass"
+            },
+            {
+                name: "Social Media Integration",
+                description: "Integration of social media to increase your brand's visibility and reach.",
+                icon: "fa-solid fa-message"
+            },
+            {
+                name: "Maintenance and Support",
+                description: "We offer continuous maintenance and support to ensure your website functions without issues.",
+                icon: "fa-solid fa-headset"
+            },
+            {
+                name: "Security and Data Protection",
+                description: "We implement security measures to protect your website and users' data.",
+                icon: "fa-solid fa-shield-halved"
+            },
+        ],
+    }
+};
+
+const { lang = 'es' }: { lang?: 'es' | 'en' } = Astro.props.language ? { lang: Astro.props.language } : {};
+
+---
+
+<section id="pricing" class="py-24 px-6">
+    <div class="max-w-320 mx-auto px-2 md:px-12">
+        <h2 class="text-white text-5xl font-bold text-center mb-6">{content[lang].title}</h2>
+        <p class="text-gray-400 text-xl text-center mb-8 max-w-200 mx-auto">{content[lang].subtitle}</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {content[lang].chooses.map((choose) => (
+                <div class="bg-neutral-900 rounded-xl shadow-lg p-6 hover:shadow-xl transition">
+                    <div class="w-14 h-14 bg-neutral-800 rounded-lg flex items-center justify-center mb-4">
+                        <i class={`${choose.icon} text-[#ab805a] text-2xl`}></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">{choose.name}</h3>
+                    <p class="text-gray-400">{choose.description}</p>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>

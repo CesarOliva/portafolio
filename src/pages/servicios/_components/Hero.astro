@@ -2,40 +2,72 @@
 
 import { Rocket, MonitorSmartphone, Store, MonitorCog,  Wrench, Search } from '@lucide/astro';
 
+const content = {
+    "es": {
+        title: "Especialistas en Soluciones Digitales",
+        subtitle: "Páginas Web y Ecommerce",
+        description: "Nos especializamos en:",
+        services: [
+            { name: "Landing Pages"},
+            { name: "Sitios Web"},
+            { name: "Tiendas Online"},
+            { name: "Sistemas a medida"},
+            { name: "SEO Básico"},
+            { name: "Soporte Técnico"}
+        ]
+    },
+    "en": {
+        title: "Specialists in Digital Solutions",
+        subtitle: "Websites and Ecommerce",
+        description: "We specialize in:",
+        services: [
+            { name: "Landing Pages"},
+            { name: "Websites"},
+            { name: "Online Stores"},
+            { name: "Custom Systems"},
+            { name: "Basic SEO"},
+            { name: "Technical Support"}
+        ]
+    }
+};
+
+const { lang = 'es' }: { lang?: 'es' | 'en' } = Astro.props.language ? { lang: Astro.props.language } : {};
+
+
 ---
 
-<section class="min-h-screen max-w-300 mx-auto flex items-center justify-center">
+<section id="hero" class="min-h-screen max-w-300 mx-auto flex items-center justify-center pt-36 pb-24">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center px-8 md:px-12">
         <div>
-            <h1 class="text-white font-semibold text-4xl md:text-5xl">Especialistas en Soluciones Digitales<br/>
-                <span class="text-black bg-[#FCED65] inline-block px-4 py-1 mt-4 md:w-100 lg:w-125">Páginas Web <br/>y Ecommerce</span>
+            <h1 class="text-white font-semibold text-4xl md:text-5xl">{content[lang].title}<br/>
+                <span class="text-black bg-[#cfb095] inline-block px-4 py-1 mt-4 md:w-100 lg:w-125">{content[lang].subtitle}</span>
             </h1>
-           
-            <p class="text-white text-xl text-center mt-6">Nos especializamos en:</p>
+
+            <p class="text-white text-xl text-center mt-6">{content[lang].description}</p>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
                 <div class="flex flex-col items-center">
-                    <Rocket class="size-12 text-white" />
-                    <p class="text-white font-semibold mt-2">Landing Pages</p>
+                    <Rocket class="size-10 md:size-12 text-white" />
+                    <p class="text-white font-semibold mt-2">{content[lang].services[0].name}</p>
                 </div>
                 <div class="flex flex-col items-center">
-                    <MonitorSmartphone class="size-12 text-white" />
-                    <p class="text-white font-semibold mt-2">Sitios Web</p>
+                    <MonitorSmartphone class="size-10 md:size-12 text-white" />
+                    <p class="text-white font-semibold mt-2">{content[lang].services[1].name}</p>
                 </div>
                 <div class="flex flex-col items-center">
-                    <Store class="size-12 text-white" />
-                    <p class="text-white font-semibold mt-2">Tiendas Online</p>
+                    <Store class="size-10 md:size-12 text-white" />
+                    <p class="text-white font-semibold mt-2">{content[lang].services[2].name}</p>
                 </div>
                 <div class="flex flex-col items-center">
-                    <MonitorCog class="size-12 text-white" />
-                    <p class="text-white font-semibold mt-2">Sistemas a medida</p>
+                    <MonitorCog class="size-10 md:size-12 text-white" />
+                    <p class="text-white font-semibold mt-2">{content[lang].services[3].name}</p>
                 </div>
                 <div class="flex flex-col items-center">
-                    <Search class="size-12 text-white" />
-                    <p class="text-white font-semibold mt-2">SEO Básico</p>
+                    <Search class="size-10 md:size-12 text-white" />
+                    <p class="text-white font-semibold mt-2">{content[lang].services[4].name}</p>
                 </div>
                 <div class="flex flex-col items-center">
-                    <Wrench class="size-12 text-white" />
-                    <p class="text-white font-semibold mt-2">Soporte Técnico</p>
+                    <Wrench class="size-10 md:size-12 text-white" />
+                    <p class="text-white font-semibold mt-2">{content[lang].services[5].name}</p>
                 </div>
             </div>
         </div>

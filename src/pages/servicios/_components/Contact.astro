@@ -1,0 +1,104 @@
+---
+
+const content = {
+    'es': {
+        title: "¿Listo para llevar tu proyecto al siguiente nivel?",
+        description: "Hablemos sobre tu proyecto y cómo puedo ayudarte a llevarlo al siguiente nivel.",
+        emailLabel: "Correo electrónico",
+        locationLabel: "Ubicación",
+        locationValue: "Monterrey, México",
+        form: {
+            name: "Nombre",
+            email: "Correo electrónico",
+            subject: "Asunto",
+            message: "Mensaje",
+            submit: "Enviar mensaje"
+        }
+    },
+    'en': {
+        title: "Ready to take your project to the next level?",
+        description: "Let's talk about your project and how I can help you take it to the next level.",
+        emailLabel: "Email",
+        locationLabel: "Location",
+        locationValue: "Monterrey, Mexico",
+        form: {
+            name: "Name",
+            email: "Email",
+            subject: "Subject",
+            message: "Message",
+            submit: "Send Message"
+        }
+    }
+};
+
+const { lang = 'es' }: { lang?: 'es' | 'en' } = Astro.props.language ? { lang: Astro.props.language } : {};
+
+---
+
+<section id="contact" class="py-24 px-6">
+    <div class="max-w-300 mx-auto px-2 md:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 space-y-8">
+            <div class="flex flex-col justify-center">
+                <h2 class="font-semibold text-3xl mb-4">{content[lang].title}</h2>
+                <p class="text-lg md:text-xl text-gray-400 mb-6">
+                    {content[lang].description}
+                </p>
+
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-neutral-800 flex items-center justify-center text-[#cfb095]">
+                            <i class="fa-regular fa-envelope text-2xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-400 font-mono">{content[lang].emailLabel}</p>
+                            <a href="mailto:cesaroliva.work@gmail.com" target="_blank" class="font-semibold text-md">cesaroliva.work@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-neutral-800 flex items-center justify-center text-[#cfb095]">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-400 font-mono">Whatsapp</p>
+                            <a href="https://wa.me/528147990195" target="_blank" class="font-semibold text-md">+52 81 4799 0195</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-neutral-800 flex items-center justify-center text-[#cfb095]">
+                            <i class="fa-solid fa-map-pin text-2xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-400 font-mono">{content[lang].locationLabel}</p>
+                            <p class="font-semibold text-md">{content[lang].locationValue}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form action="https://formsubmit.co/beb132b610619495c0bda59a40faa054" method="POST" class="space-y-6 p-8 md:p-12 bg-neutral-900 border border-[#ab805a]/20 rounded-2xl">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-lg text-gray-400 font-mono mb-1">{content[lang].form.name}</label>
+                        <input name="Nombre" class="w-full bg-neutral-800 border border-[#ab805a]/20 rounded-lg focus:outline-none p-2" type="text" required/>
+                    </div>
+                    <div>
+                        <label class="block text-lg text-gray-400 font-mono mb-1">{content[lang].form.email}</label>
+                        <input name="Email" class="w-full bg-neutral-800 border border-[#ab805a]/20 rounded-lg focus:outline-none p-2" type="email" required/>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-lg text-gray-400 font-mono mb-1">{content[lang].form.subject}</label>
+                    <input name="Asunto" class="w-full bg-neutral-800 border border-[#ab805a]/20 rounded-lg focus:outline-none p-2" type="text" required/>
+                </div>
+
+                <div>
+                    <label class="block text-lg text-gray-400 font-mono mb-1">{content[lang].form.message}</label>
+                    <textarea name="Mensaje" class="w-full bg-neutral-800 border border-[#ab805a]/20 rounded-lg focus:outline-none p-2 min-h-12 max-h-48" rows="4"></textarea>
+                </div>
+
+                <button class="w-full py-2 bg-[#ab805a] text-lg text-black font-bold rounded-lg hover:brightness-110 active:scale-[0.98] transition-all" type="submit">{content[lang].form.submit}</button>
+            </form>
+        </div>
+    </div>
+</section>

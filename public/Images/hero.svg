@@ -1,7 +1,7 @@
 <svg width="477" height="656" viewBox="0 0 477 656" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <circle cx="281" cy="604" r="36" fill="url(#paint0_linear_4_30)"/>
-<path d="M72 348C72 367.882 55.8823 384 36 384C16.1177 384 0 367.882 0 348C0 328.118 16.1177 312 36 312C55.8823 312 72 328.118 72 348Z" fill="#FDEC57"/>
-<circle opacity="0.5" cx="257.5" cy="219.5" r="219" stroke="#FCED65"/>
+<path d="M72 348C72 367.882 55.8823 384 36 384C16.1177 384 0 367.882 0 348C0 328.118 16.1177 312 36 312C55.8823 312 72 328.118 72 348Z" fill="#AB805A"/>
+<circle opacity="0.5" cx="257.5" cy="219.5" r="219" stroke="#CFB095"/>
 <g filter="url(#filter0_d_4_30)">
 <rect width="268" height="550.11" transform="matrix(0.999998 0.00178701 -0.00170284 0.999999 37.9368 60.1025)" fill="url(#pattern0_4_30)"/>
 <rect x="51" y="76" width="241" height="518" rx="24" fill="url(#pattern1_4_30)"/>
