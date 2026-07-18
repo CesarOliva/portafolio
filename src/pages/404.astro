@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const isEnglish = Astro.url.pathname.startsWith('/en');
+
+const content = isEnglish ? 
+    {
+        title: 'Page not found',
+        headline: '404',
+        subtitle: "That route does not exist, but we can get you back to the portfolio.",
+        description: 'The page you were looking for may have been moved, renamed, or deleted. Use one of the links below to continue browsing.',
+        primaryCta: 'Go home',
+        secondaryCta: 'View services',
+        tertiaryCta: 'Contact me',
+        servicesHref: '/en/services',
+        contactHref: 'https://wa.me/528147990195?text=Hello%21,%20I%20am%20interested%20in%20your%20services',
+        homeHref: '/en',
+        }
+    : {
+        title: 'Pagina no encontrada',
+        headline: '404',
+        subtitle: 'Esa ruta no existe, pero podemos llevarte de regreso al portafolio.',
+        description: 'La pagina que buscabas pudo haber sido movida, renombrada o eliminada. Usa alguno de estos enlaces para seguir navegando.',
+        primaryCta: 'Ir al inicio',
+        secondaryCta: 'Ver servicios',
+        tertiaryCta: 'Contactarme',
+        servicesHref: '/servicios',
+        contactHref: 'https://wa.me/528147990195?text=Hola%21,%20Me%20interesa%20tus%20servicios',
+        homeHref: '/',
+    };
+---
+
+<Layout
+    title={`${content.title} | Cesar Oliva`}
+    description={content.subtitle}
+    locale={isEnglish ? 'en-US' : 'es-MX'}
+    ogLocale={isEnglish ? 'en_US' : 'es_MX'}
+    language={isEnglish ? 'en' : 'es'}
+    robots="noindex, nofollow"
+    canonical="https://bycesaroliva.com/404"
+    ogUrl="https://bycesaroliva.com/404"
+>
+    <main class="relative min-h-screen overflow-hidden px-6 py-10">
+        <div class="absolute inset-0">
+            <div class="absolute left-1/2 top-0 h-[34rem] w-[34rem] -translate-x-1/2 rounded-full bg-[#ab805a]/12 blur-[140px]"></div>
+            <div class="absolute -bottom-24 right-[-5rem] h-72 w-72 rounded-full bg-[#cfb095]/10 blur-[120px]"></div>
+            <div class="absolute left-[-6rem] top-1/2 h-72 w-72 rounded-full bg-white/5 blur-[120px]"></div>
+        </div>
+
+        <section class="relative mx-auto flex min-h-[calc(100vh-5rem)] max-w-5xl items-center">
+            <div class="grid w-full gap-8 lg:grid-cols-[1.15fr_0.85fr]">
+                <div class="flex flex-col justify-center">
+                    <div class="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-[#ab805a]/30 bg-neutral-950/80 px-4 py-2 text-xs font-mono uppercase tracking-[0.3em] text-[#cfb095] backdrop-blur">
+                        <span class="h-2 w-2 rounded-full bg-[#ab805a]"></span>{content.title}
+                    </div>
+
+                    <h1 class="text-7xl font-bold tracking-tight text-white md:text-9xl">{content.headline}</h1>
+                    <p class="mt-6 max-w-xl text-2xl font-semibold leading-tight text-[#f3e7db] md:text-4xl">{content.subtitle}</p>
+                    <p class="mt-5 max-w-2xl text-base leading-7 text-gray-400 md:text-lg">{content.description}</p>
+
+                    <div class="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+                        <a href={content.homeHref} class="inline-flex items-center justify-center rounded-lg bg-white px-7 py-4 font-semibold text-black transition-colors hover:bg-gray-100">{content.primaryCta}</a>
+                        <a href={content.servicesHref} class="inline-flex items-center justify-center rounded-lg border border-[#ab805a]/25 bg-neutral-900/80 px-7 py-4 font-semibold text-white transition-colors hover:border-[#ab805a]/55 hover:bg-neutral-800">{content.secondaryCta} </a>
+                        <a href={content.contactHref}class="inline-flex items-center justify-center rounded-lg border border-transparent px-2 py-4 font-semibold text-[#cfb095] transition-colors hover:text-white" >{content.tertiaryCta} </a>
+                    </div>
+                </div>
+
+                <div class="flex items-center">
+                    <div class="relative w-full overflow-hidden rounded-3xl border border-[#ab805a]/20 bg-neutral-900/80 p-8 shadow-2xl shadow-black/30 backdrop-blur">
+                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(171,128,90,0.16),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(207,176,149,0.12),transparent_30%)]"></div>
+
+                        <div class="relative space-y-6">
+                            <div class="rounded-2xl border border-white/5 bg-black/25 p-5">
+                                <p class="font-mono text-sm uppercase tracking-[0.35em] text-gray-500">{isEnglish ? 'Quick links' : 'Enlaces rapidos'}</p>
+
+                                <div class="mt-4 grid gap-3">
+                                    <a href={content.homeHref} class="flex items-center justify-between rounded-xl border border-white/5 bg-neutral-950/50 px-4 py-3 text-left transition-colors hover:border-[#ab805a]/25 hover:bg-neutral-950">
+                                        <span class="font-medium text-white">{isEnglish ? 'Home' : 'Inicio'}</span>
+                                        <span class="text-sm text-gray-400">01</span>
+                                    </a>
+                                    <a href={content.servicesHref} class="flex items-center justify-between rounded-xl border border-white/5 bg-neutral-950/50 px-4 py-3 text-left transition-colors hover:border-[#ab805a]/25 hover:bg-neutral-950">
+                                        <span class="font-medium text-white">{isEnglish ? 'Services' : 'Servicios'}</span>
+                                        <span class="text-sm text-gray-400">02</span>
+                                    </a>
+                                    <a href={content.contactHref} class="flex items-center justify-between rounded-xl border border-white/5 bg-neutral-950/50 px-4 py-3 text-left transition-colors hover:border-[#ab805a]/25 hover:bg-neutral-950">
+                                        <span class="font-medium text-white">{isEnglish ? 'Contact' : 'Contacto'}</span>
+                                        <span class="text-sm text-gray-400">03</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>
