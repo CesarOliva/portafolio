@@ -60,7 +60,7 @@ const languageSwitchHref = (() => {
   <meta property="og:type" content="profile" />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:image" content="https://bycesaroliva.com/Images/Profile.png" />
+  <meta property="og:image" content="https://bycesaroliva.com/Images/Profile.webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="César Emilio Oliva Vázquez" />
@@ -74,7 +74,7 @@ const languageSwitchHref = (() => {
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content="https://bycesaroliva.com/Images/Profile.png" />
+  <meta name="twitter:image" content="https://bycesaroliva.com/Images/Profile.webp" />
   <meta name="twitter:image:alt" content="Cesar Oliva - Desarrollador Frontend Jr" />
   
   <!-- Schema.org (Google) - Person -->
@@ -85,7 +85,7 @@ const languageSwitchHref = (() => {
       "name": "César Emilio Oliva Vázquez",
       "alternateName": "César Oliva",
       "url": "https://bycesaroliva.com/",
-      "image": "https://bycesaroliva.com/Images/Profile.png",
+      "image": "https://bycesaroliva.com/Images/Profile.webp",
       "description": description,
       "jobTitle": "Frontend Developer Jr | Freelance",
       "worksFor": {
@@ -129,7 +129,7 @@ const languageSwitchHref = (() => {
     })}
   </script>
   
-  <link rel="icon" href="/Images/Profile.png" />
+  <link rel="icon" href="/Images/Profile.webp" />
   <meta name="generator" content={Astro.generator} />
   
   <script src="https://kit.fontawesome.com/17383348a8.js" crossorigin="anonymous"></script>
@@ -137,11 +137,13 @@ const languageSwitchHref = (() => {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 </head>
 <body class="antialiased">
-    <a 
-      class="fixed right-6 top-6 z-50 rounded-full border border-[#ab805a]/30 bg-neutral-950/90 px-4 py-2 text-sm font-semibold text-white backdrop-blur transition-colors hover:border-[#ab805a]/60 hover:bg-neutral-900" 
-      href={languageSwitchHref}>
-      {language === 'es' ? 'EN' : 'ES'}
-    </a>
-  <slot />
+  <a 
+    class="fixed right-6 top-6 z-50 rounded-full border border-[#ab805a]/30 bg-neutral-950/90 px-4 py-2 text-sm font-semibold text-white backdrop-blur transition-colors hover:border-[#ab805a]/60 hover:bg-neutral-900" 
+    href={languageSwitchHref}>
+    {language === 'es' ? 'EN' : 'ES'}
+  </a>
+  <main>
+    <slot />
+  </main>
 </body>
 </html>
