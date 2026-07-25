@@ -1,1 +1,14 @@
+# ============================================
+# Reescritura
+# ============================================
+RewriteEngine On
+
+# Forzar HTTPS y eliminar www
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.bycesaroliva\.com$ [NC]
+RewriteRule ^(.*)$ https://bycesaroliva.com/$1 [R=301,L]
+
+# ============================================
+# Página 404 personalizada
+# ============================================
 ErrorDocument 404 /404.html
